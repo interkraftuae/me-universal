@@ -64,11 +64,12 @@ const SolutionGrid = () => {
       <div className="grid lg:h-110 grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5">
         {/* Left Grid Card */}
         <div className=" bg-white/3 border border-white/10 lg:p-5">
-          <div className="flex h-[230px] lg:h-auto items-center relative justify-center w-full ">
+          <div className="flex h-[230px] lg:h-full items-center relative justify-center w-full ">
             <Image
               src={"/home/solution/grid-1/digital-smart-lighting.webp"}
               alt={"Digital Smart Lighting"}
               fill
+              className="object-cover"
             />
             <div className="absolute size-full inset-0 bg-black/50" />
             <div className="relative p-2 text-xl text-white">

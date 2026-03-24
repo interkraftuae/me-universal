@@ -375,7 +375,7 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full bg-primary text-white py-2.5 rounded-full hover:bg-yellow-500 transition font-semibold disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-primary text-white py-2.5 rounded-full hover:bg-primary/90 transition font-semibold disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {status === "loading" ? (
                   <>

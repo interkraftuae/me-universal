@@ -48,7 +48,7 @@ const AccordionItem = ({
 
   if (!item.children) {
     return (
-      <li className="border-b border-gray-100">
+      <div className="border-b border-gray-100">
         <a
           href={item.link}
           onClick={onClose}
@@ -56,12 +56,12 @@ const AccordionItem = ({
         >
           {item.label}
         </a>
-      </li>
+      </div>
     );
   }
 
   return (
-    <li className="border-b border-gray-100">
+    <div className="border-b border-gray-100">
       <button
         onClick={toggle}
         className="w-full flex items-center text-2xl justify-between py-4 font-medium text-gray-800 hover:text-gray-500 transition-colors focus:outline-none"
@@ -84,9 +84,9 @@ const AccordionItem = ({
       </button>
 
       <div ref={bodyRef} className="overflow-hidden">
-        <ul className="pb-2 pl-3 flex flex-col">
+        <div className="pb-2 pl-3 flex flex-col">
           {item.children.map((child) => (
-            <li key={child.link + child.label}>
+            <div key={child.link + child.label}>
               <a
                 href={child.link}
                 onClick={onClose}
@@ -94,11 +94,11 @@ const AccordionItem = ({
               >
                 {child.label}
               </a>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
-    </li>
+    </div>
   );
 };
 

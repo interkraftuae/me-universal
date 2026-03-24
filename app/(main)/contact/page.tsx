@@ -6,10 +6,10 @@ const page = () => {
     <>
       <section className="relative pt-20 flex flex-col items-center justify-center min-h-[400px] w-full h-full">
         <div className="relative z-10 text-center ">
-          <h2 className="text-4xl font-rubik mb-4">
+          <h2 className="text-4xl font-rubik mb-4 text-gray-50">
             We’d Love to Hear From You
           </h2>
-          <p className="text-lg max-w-2xl text-gray-700">
+          <p className="text-lg max-w-2xl text-gray-100">
             Whether you’re looking for reliable electronics, stylish apparel, or
             durable travel bags, our team is here to answer your questions and
             explore new opportunities with you. Reach out today and let’s build
@@ -18,10 +18,11 @@ const page = () => {
         </div>
 
         <img
-          className="absolute inset-0 w-full h-full object-cover"
-          src={"/contact/banner.jpg"}
+          className="absolute inset-0 w-full h-full object-top object-cover"
+          src={"/contact.jpg"}
           alt={"banner"}
         />
+        <div className="bg-black/60 absolute inset-0 size-full " />
       </section>
       <section>
         <Contact color={"bg-white"} />

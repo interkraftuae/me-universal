@@ -4,6 +4,7 @@ import Nav from "./nav";
 import Logo from "./Logo";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 const Header = () => {
   const menuLinks = [
     { label: "Home", link: "/" },
@@ -11,9 +12,9 @@ const Header = () => {
       label: "About us",
       link: "",
       children: [
-        { label: "about us", link: "/lighting" },
-        { label: "sustaiinability", link: "/automation" },
-        { label: "per sqm concept", link: "/networking" },
+        { label: "About us", link: "/about" },
+        { label: "Sustaiinability", link: "/sustainability" },
+        { label: "Per sqm concept", link: "/per-sqm-concept" },
       ],
     },
     {
@@ -55,7 +56,7 @@ const Header = () => {
         { label: "Deepscent: Digital Fragrance", link: "/networking" },
       ],
     },
-    { label: "Blogs", link: "/blogs" },
+    { label: "Blogs", link: "#" },
     { label: "Careers", link: "/careers" },
   ];
   const [scrolled, setScrolled] = useState(false);
@@ -78,7 +79,14 @@ const Header = () => {
   }, []);
   useEffect(() => {
     const normalizedPath = pathName.toLowerCase();
-    if (normalizedPath !== "/") {
+    if (
+      normalizedPath !== "/" &&
+      normalizedPath !== "/about" &&
+      normalizedPath !== "/sustainability" &&
+      normalizedPath !== "/per-sqm-concept" &&
+      normalizedPath !== "/careers" &&
+      normalizedPath !== "/contact"
+    ) {
       setIsDark(true);
     } else {
       setIsDark(false);
@@ -105,7 +113,9 @@ const Header = () => {
         <MobileNav data={menuLinks} />
 
         <div className="hidden  lg:flex items-center gap-4">
-          <button className="btn">Contact</button>
+          <Link href={"/contact"}>
+            <button className="btn">Contact</button>
+          </Link>
         </div>
       </nav>
     </header>
