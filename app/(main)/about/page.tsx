@@ -62,9 +62,15 @@ const AboutPage = () => {
           </div>
         </div>
         <div className=" relative max-w-5xl container flex items-center gap-0 overflow-hidden ">
-          <div className="w-lg h-[240px] bg-amber-300" />
-          <div className="w-xl h-[310px] bg-blue-300" />
-          <div className="w-lg h-[240px] bg-amber-300" />
+          <div className="w-lg h-[240px] relative">
+            <Image src={"/about/img-1.jpg"} alt={"about"} fill />
+          </div>
+          <div className="w-xl h-[310px] relative">
+            <Image src={"/about/img-2.jpg"} alt={"about"} fill />
+          </div>
+          <div className="w-lg h-[240px] relative">
+            <Image src={"/about/img-3.jpg"} alt={"about"} fill />
+          </div>
         </div>
       </section>
 
