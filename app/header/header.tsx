@@ -13,7 +13,7 @@ const Header = () => {
       link: "",
       children: [
         { label: "About us", link: "/about" },
-        { label: "Sustaiinability", link: "/sustainability" },
+        { label: "Sustainability", link: "/sustainability" },
         { label: "Per sqm concept", link: "/per-sqm-concept" },
       ],
     },
