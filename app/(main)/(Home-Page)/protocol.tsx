@@ -22,7 +22,7 @@ const protocols = [
   },
   {
     desc: "Low-power long-range wireless communication technology used for IoT sensor networks.",
-    img: "lorawan",
+    img: "loarawan",
   },
   {
     desc: "Lightweight messaging protocol enabling cloud connectivity and real-time data exchange.",
@@ -30,7 +30,7 @@ const protocols = [
   },
   {
     desc: "Secure, low-power wireless mesh networking protocol designed for reliable IoT device connectivity without a central hub.",
-    img: "hread",
+    img: "thread",
   },
   {
     desc: "Power-over-Ethernet technology enables devices to receive power and data through a single cable.",

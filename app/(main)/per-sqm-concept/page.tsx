@@ -94,7 +94,7 @@ const Page = () => {
               <span className="block">
                 From smart automation and energy management to air purification,
                 ventilation, integrated waste systems, digital entertainment,
-                and building solutions,  every system is selected to enhance how
+                and building solutions, every system is selected to enhance how
                 modern spaces function and feel. Instead of imagining how
                 products will work inside a project, you can experience them
                 firsthand.
