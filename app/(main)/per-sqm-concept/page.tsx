@@ -111,10 +111,7 @@ const Page = () => {
           </h2>
 
           <h3 className="text-4xl lg:text-4xl font-montserrat mt-3">
-            It is{" "}
-            <span className="underline text-indigo-600 font-medium">
-              A LIVE ECOSYSTEM.
-            </span>
+            It is A LIVE ECOSYSTEM.
           </h3>
 
           {/* Image Collage */}
@@ -144,8 +141,7 @@ const Page = () => {
 
           {/* Heading */}
           <h2 className="text-xl md:text-3xl font-montserrat font-medium mb-12">
-            DESIGNED FOR{" "}
-            <span className="text-primary">RESIDENTS & DEVELOPERS</span>
+            DESIGNED FOR RESIDENTS & DEVELOPERS
           </h2>
 
           {/* Cards */}
