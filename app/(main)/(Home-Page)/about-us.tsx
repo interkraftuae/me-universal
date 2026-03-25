@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className=" py-24">
+    <section className=" mt-20">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
         {/* LEFT IMAGE */}
         <div className="relative">
@@ -31,7 +32,7 @@ export default function AboutSection() {
         {/* RIGHT CONTENT */}
         <div>
           <h2 className="text-4xl font-semibold font-montserrat tracking-tight mb-6">
-            ABOUT <span className="text-primary ">ME UNIVERSAL</span>
+            ABOUT ME UNIVERSAL
           </h2>
 
           <p className="text-gray-600 mb-4 text-sm leading-relaxed">
@@ -59,9 +60,11 @@ export default function AboutSection() {
           </p>
 
           {/* BUTTON */}
-          <button className="btn mb-8 hover:bg-primary/90 transition">
-            About MEUniversal →
-          </button>
+          <Link href={"/about"}>
+            <button className="btn mb-8 hover:bg-primary/90 transition">
+              About MEUniversal →
+            </button>
+          </Link>
 
           {/* STATS */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

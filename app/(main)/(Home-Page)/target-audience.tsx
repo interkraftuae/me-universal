@@ -20,12 +20,11 @@ const TargetAudience = () => {
     },
   ];
   return (
-    <section className="bg-[#15141D] py-18">
+    <section className="bg-[#15141D] py-20">
       <div className="container text-center">
         <span className=" text-primary">// Our Target Audience</span>
         <h1 className="font-montserrat mt-3 uppercase tracking-tight text-5xl text-gray-200">
-          Designed around
-          <span className="text-primary"> your role</span>
+          Designed around your role
         </h1>
       </div>
       <div className="container grid grid-cols-1 lg:grid-cols-4 gap-5 mt-12 ">
@@ -37,7 +36,9 @@ const TargetAudience = () => {
             <div className=" flex flex-col items-center justify-center gap-2">
               <BadgeCheck className="size-10" />
             </div>
-            <h3 className="text-2xl lg:text-lg mt-6 text-center">{item.title}</h3>
+            <h3 className="text-2xl lg:text-lg mt-6 text-center">
+              {item.title}
+            </h3>
             <p className="text-sm mt-4 text-center ">{item.desc}</p>
           </div>
         ))}

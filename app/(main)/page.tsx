@@ -16,8 +16,8 @@ export default function Home() {
       <PartnerLogo />
       <Solutions />
       <TargetAudience />
-      <ProtocolSection />
       <AboutSection />
+      <ProtocolSection />
       <WhyChoose />
       <ProcessSection />
       <FeaturedProduct />

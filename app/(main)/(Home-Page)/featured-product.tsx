@@ -1,4 +1,3 @@
-
 const FeaturedProduct = () => {
   const product = [
     {
@@ -15,18 +14,15 @@ const FeaturedProduct = () => {
     },
   ];
   return (
-    <div className="bg-[#15141D] py-20">
+    <div className="bg-[#15141D] mt-20 py-20">
       <div className="container">
         <h1 className="text-gray-200 tracking-tight text-5xl mb-10 text-center font-montserrat">
-          Our Featured<span className="text-primary"> Products</span>
+          Our Featured Products
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           {product.map((item, key) => (
-            <div
-              key={key}
-              className="h-[400px] relative border border-gray-600"
-            >
-              <h2 className="absolute bottom-0 left-1/2 py-6 bg-linear-to-t from-black/90 font-semibold via-black/70 w-full text-center -translate-x-1/2 text-white ">
+            <div key={key} className="h-[400px] relative">
+              <h2 className="absolute bottom-0 left-1/2 py-8 bg-linear-to-t from-[#15141D] from-20% font-semibold via-80% via-[#15141D]/80 w-[105%] text-center -translate-x-1/2 text-white ">
                 {item.label}
               </h2>
               <img

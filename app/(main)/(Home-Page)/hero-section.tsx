@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 const HeroSection = () => {
   return (
     <section className="min-h-[80dvh] lg:min-h-[95dvh] relative flex py-26 lg:py-0 justify-center items-center overflow-hidden">
@@ -28,11 +30,25 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col lg:flex-row lg:items-center justify-center lg:justify-start gap-4">
-            <button className="btn">Explore Solutions</button>
+            <Link
+              href="#solutions"
+              scroll={false}
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById("solutions");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              <button className="btn">Explore Solutions</button>
+            </Link>
 
-            <button className="btn bg-transparent! border! border-primary!">
-              Visit PER SQM Experience
-            </button>
+            <Link href={"/per-sqm-concept"}>
+              <button className="btn bg-transparent! border! border-primary!">
+                Visit PER SQM Experience
+              </button>
+            </Link>
           </div>
         </div>
 

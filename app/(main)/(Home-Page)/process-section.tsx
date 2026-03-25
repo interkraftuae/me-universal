@@ -28,7 +28,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className=" pt-5 pb-20">
+    <section className=" mt-20 ">
       <div className="container text-center">
         {/* Subtitle */}
         <p className="text-primary text-sm tracking-widest mb-4">
@@ -37,20 +37,25 @@ export default function ProcessSection() {
 
         {/* Heading */}
         <h2 className="text-4xl uppercase font-semibold font-montserrat mb-14">
-          From <span className="text-primary">Brief to Building</span> - A
-          Structured Process
+          From Brief to Building - A Structured Process
         </h2>
 
         {/* Timeline */}
         <div className="relative">
           {/* Horizontal line */}
-          <div className="absolute left-1/2 -translate-x-1/2 lg:top-1/2 lg:top-9 w-[2px] h-full lg:h-[2px] bg-primary/40" />
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 relative">
+            <div className="hidden lg:block absolute top-9 left-[10%] right-[10%] h-[2px] bg-primary/40 -translate-y-1/2" />
+
+            {/* Vertical line — mobile only */}
+            <div className="lg:hidden absolute left-1/2 -translate-x-1/2 top-16 bottom-16 w-[2px] bg-primary/40" />
             {steps.map((step, index) => (
-              <div key={index} className={`flex  flex-col items-center`}>
+              <div
+                key={index}
+                className={`flex relative flex-col items-center`}
+              >
                 {/* Circle */}
-                <div className="size-32 text-3xl lg:size-18 rounded-full hover:bg-primary hover:text-white transition-colors duration-200 border-2 border-primary flex items-center justify-center text-primary bg-white font-medium">
+                <div className="size-32  text-3xl lg:size-18 rounded-full hover:bg-primary hover:text-white transition-colors duration-200 border-2 border-primary flex items-center justify-center text-primary bg-white font-medium">
                   {step.num}
                 </div>
 

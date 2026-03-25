@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 const Solutions = () => {
   return (
-    <section className="  mt-16">
+    <section className=" mt-20">
       <div className=" container flex-col lg:flex-row flex gap-6 items-start mb-20">
         <h1 className="uppercase tracking-tight font-semibold font-montserrat text-4xl">
-          <span className="text-primary">ADVANCED </span> Solutions
+          ADVANCED Solutions
         </h1>
         <div className="space-y-3">
           <p>
@@ -36,7 +36,7 @@ const Solutions = () => {
           </p>
         </div>
       </div>
-      <div className="bg-[#050100] py-18">
+      <div className="bg-[#050100] py-20">
         <SolutionGrid />
       </div>
     </section>
@@ -47,98 +47,95 @@ export default Solutions;
 
 const grid2 = [
   {
-    label: "Integrated Waste Management",
-    img: "integrated-waste-management.jpg",
+    label: "Wireless Retrofit Automation",
+    img: "wireless-retrofit.jpg",
   },
-  { label: "Centralised Vacuum Cleaning", img: "centralized-vaccum.jpg" },
-  { label: "Smart Villas & Mansions", img: "smart-villas.png" },
-  { label: "Smart Buildings & Spaces", img: "smart-spaces.webp" },
-  { label: "Smart Mosque", img: "smart-mosque.webp" },
-  { label: "Digital Home Cinema", img: "digital-home-cinema.jpg" },
-  { label: "Outdoor Theatre", img: "outdoor-theatre.jpg" },
-  { label: "Push Pull Locks", img: "push-pull-locks.jpg" },
+  { label: "Bathroom Ventilation System", img: "bathroom-ventilation.jpg" },
+  { label: "Odor Control & Air Disinfection", img: "odor-control.png" },
+  { label: "Digital Electric Towel Warmer", img: "electric-warmer.jpg" },
+  { label: "Home Cinema & Sound Systems", img: "home-cinema.jpg" },
+  { label: "Mirror TV Systems", img: "mirror-tv.jpg" },
+  { label: "Water Leakage Solution", img: "water-leakage.png" },
+  { label: "Digital Fragrance", img: "digital-fragnance.jpg" },
 ];
 const SolutionGrid = () => {
   return (
-    <div className="container ">
-      <div className="grid lg:h-110 grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5">
-        {/* Left Grid Card */}
-        <div className=" bg-white/3 border border-white/10 lg:p-5">
-          <div className="flex h-[230px] lg:h-full items-center relative justify-center w-full ">
+    <div id={"solutions"} className="container ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+        {/* LEFT BIG CARD */}
+        <div className="bg-white/5 border border-white/10 p-4 lg:p-5 flex flex-col">
+          <div className="relative w-full flex-1 min-h-[260px]">
             <Image
-              src={"/home/solution/grid-1/digital-smart-lighting.webp"}
-              alt={"Digital Smart Lighting"}
+              src="/home/solution/grid-1/dc-lighting.jpg"
+              alt="DC Lighting"
               fill
               className="object-cover"
             />
-            <div className="absolute size-full inset-0 bg-black/50" />
-            <div className="relative p-2 text-xl text-white">
-              Digital Smart Lighting
-            </div>
           </div>
+          <p className="text-center text-base text-white mt-3">
+            DC Lighting & Automation
+          </p>
         </div>
-        <div className="grid grid-cols-1 gap-5">
-          {/* Top Grid Cart */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5 lg:p-5 border border-white/10 bg-white/3">
-            <div className=" h-[230px] lg:h-auto">
-              <div className="flex items-center relative justify-center w-full h-full">
-                <Image
-                  src={"/home/solution/grid-1/iot-controls.jpg"}
-                  alt={"Digital Smart Lighting"}
-                  fill
-                />
-                <div className="absolute size-full inset-0 bg-black/50" />
-                <div className="relative p-2 text-xl text-white">
-                  EnOcean IOT Controls
-                </div>
-              </div>
-            </div>
 
-            <div className=" h-[230px] lg:h-auto ">
-              <div className="flex items-center relative justify-center w-full h-full">
+        {/* RIGHT SIDE */}
+        <div className="flex flex-col gap-4 lg:gap-6">
+          {/* TOP ROW */}
+          <div className="grid grid-cols-2 gap-4 lg:gap-6 bg-white/5 border border-white/10 p-4 lg:p-5">
+            <div className="flex flex-col">
+              <div className="relative w-full h-[180px]">
                 <Image
-                  src={"/home/solution/grid-1/wireless-network.jpg"}
-                  alt={"Digital Smart Lighting"}
-                  fill
-                />
-                <div className="absolute size-full inset-0 bg-black/50" />
-                <div className="relative p-2 text-xl text-white">
-                  IP500 Wireless Network
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Grid Card */}
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5 border lg:p-5 border-white/10 bg-white/3">
-            <div className=" h-[230px] lg:h-auto ">
-              <div className="flex items-center relative justify-center w-full h-full">
-                <Image
-                  src={"/home/solution/grid-1/laundry-collection-system.jpg"}
-                  alt={"Digital Smart Lighting"}
-                  fill
-                />
-                <div className="absolute size-full inset-0 bg-black/50" />
-                <div className="relative text-xl p-2 text-white">
-                  Laundry Collection System
-                </div>
-              </div>
-            </div>
-
-            <div className=" h-[230px] lg:h-auto ">
-              <div className="flex items-center relative justify-center w-full h-full">
-                <Image
-                  src={"/home/solution/grid-1/lighting-control.jpg"}
-                  alt={"Digital Smart Lighting"}
+                  src="/home/solution/grid-1/ai-powered.jpg"
+                  alt="Ai Powered "
                   fill
                   className="object-cover"
                 />
-                <div className="absolute size-full inset-0 bg-black/50" />
-                <div className="relative text-xl p-2 text-white">
-                  Digital Smart Ligting Controller
-                </div>
               </div>
+              <p className="text-center text-white mt-2">
+                Air Powered Laundry Collection
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <div className="relative w-full h-[180px]">
+                <Image
+                  src="/home/solution/grid-1/centralized-vaccume.png"
+                  alt="Centralised Vacuum Cleaning"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-center text-white mt-2">
+                Centralised Vacuum Cleaning
+              </p>
+            </div>
+          </div>
+
+          {/* BOTTOM ROW */}
+          <div className="grid grid-cols-2 gap-4 lg:gap-6 bg-white/5 border border-white/10 p-4 lg:p-5">
+            <div className="flex flex-col">
+              <div className="relative w-full bg-neutral-800 h-[180px]">
+                <Image
+                  src="/home/solution/grid-1/grabage-line.png"
+                  alt="Garbage & Line Chutes"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-center text-white mt-2">
+                Garbage & Line Chutes
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <div className="relative w-full h-[180px]">
+                <Image
+                  src="/home/solution/grid-1/building-automation.jpeg"
+                  alt="Building Automation & Energy Mgmt"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-center text-white text-base mt-2">
+                Building Automation & Energy Mgmt
+              </p>
             </div>
           </div>
         </div>
@@ -146,19 +143,18 @@ const SolutionGrid = () => {
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5 bg-white/3 border mt-5 lg:p-5 border-white/10">
         {grid2.map((item, key) => (
-          <div key={key} className=" h-[180px]">
-            <div className="flex items-center relative justify-center w-full h-full">
+          <div key={key} className=" ">
+            <div className="flex items-center h-[180px] relative justify-center w-full ">
               <Image
                 src={`/home/solution/grid-2/${item.img}`}
                 alt={item.label}
                 fill
                 className="object-cover"
               />
-              <div className="absolute size-full inset-0 bg-black/70" />
-              <div className="relative text-center p-2 text-xl text-white">
-                {item.label}
-              </div>
             </div>
+            <p className="relative text-center text-base p-2 text-white">
+              {item.label}
+            </p>
           </div>
         ))}
       </div>

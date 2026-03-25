@@ -17,12 +17,12 @@ const articles = [
 ];
 export default function NewsAndContact() {
   return (
-    <section className=" pt-20">
+    <section className=" mt-20">
       <div className="container">
         {/* ================= NEWS SECTION ================= */}
         <div className="text-center mb-14">
           <h2 className="text-4xl font-semibold font-montserrat tracking-wide">
-            <span className="text-primary">LATEST</span> NEWS & ARTICLES
+            LATEST NEWS & ARTICLES
           </h2>
 
           <p className="text-gray-500 max-w-xl mx-auto mt-4 text-sm">

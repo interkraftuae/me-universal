@@ -1,57 +1,59 @@
+import Image from "next/image";
 const protocols = [
   {
-    title: "EnOcean",
-    desc: "ISO/IEC 14543 wireless energy harvesting – batteryless retrofit automation",
+    desc: "Wireless energy-harvesting protocol enabling battery-less automation systems.",
+    img: "enocean",
   },
   {
-    title: "BACnet",
-    desc: "ASHRAE 135 open standard for HVAC and building control – globally adopted",
+    desc: "ASHRAE building automation standard widely used for HVAC and building control.",
+    img: "bacnet",
   },
   {
-    title: "KNX",
-    desc: "European standard for lighting, HVAC, and blind control in commercial buildings",
+    desc: "European standard used for lighting, HVAC, and smart building automation.",
+    img: "knx",
   },
   {
-    title: "Modbus",
-    desc: "Industrial serial protocol for energy meters, VFDs, and legacy equipment",
+    desc: "Industrial communication protocol used for energy meters and industrial equipment.",
+    img: "modbus",
   },
   {
-    title: "DALI-2",
-    desc: "Addressable lighting interface for granular zone and scene control",
+    desc: "Advanced digital lighting control protocol enabling precise lighting management.",
+    img: "dali",
   },
   {
-    title: "LoRaWAN",
-    desc: "Addressable lighting interface for granular zone and scene control",
+    desc: "Low-power long-range wireless communication technology used for IoT sensor networks.",
+    img: "lorawan",
   },
   {
-    title: "MQTT",
-    desc: "Lightweight IoT messaging enabling cloud-based analytics and AI integrations",
+    desc: "Lightweight messaging protocol enabling cloud connectivity and real-time data exchange.",
+    img: "mqtt",
   },
   {
-    title: "OPC-UA",
-    desc: "Industrial IoT standard for SCADA and industrial automation interoperability",
+    desc: "Secure, low-power wireless mesh networking protocol designed for reliable IoT device connectivity without a central hub.",
+    img: "hread",
   },
   {
-    title: "PoE IEEE",
-    desc: "Power-over-Ethernet for DC lighting, sensors, and devices over standard cabling",
+    desc: "Power-over-Ethernet technology enables devices to receive power and data through a single cable.",
+    img: "poe",
   },
   {
-    title: "Zigbee",
-    desc: "Mesh wireless protocol for residential and commercial smart home systems",
+    desc: "Wireless mesh networking protocol commonly used in smart home and automation systems.",
+    img: "zigbee",
   },
   {
-    title: "M-Bus",
-    desc: "European standard for remote reading of utility meters – water, gas, energy",
+    desc: "European protocol used for remote monitoring of water, gas, and energy meters.",
+    img: "mbus",
   },
+
   {
-    title: "OPC-DA",
-    desc: "Legacy SCADA integration for existing industrial and building infrastructure",
+    desc: "IP-based interoperability standard ensures seamless communication between diverse smart home ecosystems and devices.",
+    img: "matter",
   },
 ];
 
 export default function ProtocolSection() {
   return (
-    <section className="bg-black py-24 text-white">
+    <section className="bg-black mt-20 py-20 text-white">
       <div className="container">
         {/* Top Label */}
         <p className="text-primary text-xs tracking-widest mb-4">
@@ -60,8 +62,7 @@ export default function ProtocolSection() {
 
         {/* Heading */}
         <h2 className="text-4xl font-montserrat mb-8">
-          WORKS WITH <span className="text-primary">EVERY STANDARD</span> YOU
-          SPECIFY
+          WORKS WITH EVERY STANDARD YOU SPECIFY
         </h2>
 
         {/* Grid */}
@@ -71,10 +72,15 @@ export default function ProtocolSection() {
               key={index}
               className="p-6 border bg-primary/12 border-white/10 hover:bg-primary/10 transition"
             >
-              <h3 className="text-primary text-xl lg:text-sm font-semibold mb-2">
-                {item.title}
-              </h3>
-
+              <div className="size-20 ">
+                <Image
+                  width={50}
+                  height={50}
+                  src={`/home/icons/${item.img}.png`}
+                  alt={"item.img"}
+                  className="object-contain w-full h-full"
+                />
+              </div>
               <p className="text-sm lg:text-xs text-white/70 leading-relaxed">
                 {item.desc}
               </p>
