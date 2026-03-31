@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <HeroSection
-        img={"ai-powered-laundry/banner.png"}
+        img={"/solutions/highrise-community-automation/banner.jpg"}
         title={" Highrise & Community Automation"}
         desc={"Smarter Living. Seamlessly Connected."}
       />
@@ -35,7 +35,7 @@ const page = () => {
               "Home appliance integration and automation",
               "Unified access and security control interface",
             ],
-            img: "",
+            img: "/solutions/highrise-community-automation/smart-home-automation-blog.webp",
           },
           {
             title: "Community Management",
@@ -48,7 +48,7 @@ const page = () => {
               "Community alerts and resident communication tools",
               "Remote facility monitoring and parking management",
             ],
-            img: "",
+            img: "/solutions/highrise-community-automation/smart-package.webp",
           },
           {
             title: "Building Management Hub",
@@ -60,7 +60,7 @@ const page = () => {
               "Real-time alerts for security and community services",
               "Integrated communication for residents and administrators",
             ],
-            img: "",
+            img: "/solutions/highrise-community-automation/building-management-hub.webp",
           },
         ]}
       />
@@ -70,14 +70,16 @@ const page = () => {
             num: "01",
             title: "Unified Unit-to-Community Architecture",
             desc: "Our systems are designed to bridge the gap between private luxury and communal efficiency. We provide a single, modular backbone that scales from individual apartment automation controlling lighting, climate, and shades to the broader highrise infrastructure. This integration allows architects and developers to offer a cohesive digital experience where a resident’s smart home interface connects directly to community services like visitor management and amenity booking. By consolidating these functions into one interoperable platform, we eliminate 'app fatigue'.",
-            image: "/features/architectural-integration.jpg",
+            image:
+              "/solutions/highrise-community-automation/unified-unit-to-community-architecture.jpg",
             imageLeft: true,
           },
           {
             num: "02",
             title: "Scalable Management for Modern Developments",
             desc: "Whether you are developing a boutique residential tower or a sprawling gated community, our platform adapts to the specific operational density of the project. The Building Management Hub provides facility teams with a centralized dashboard to oversee security, parking, and parcel deliveries without intruding on resident privacy. For developers, this modularity means the system can be deployed in phases, growing as the community expands. This approach not only enhances the day-to-day resident experience but also significantly boosts the long-term asset value.",
-            image: "/features/scalable-design.jpg",
+            image:
+              "/solutions/highrise-community-automation/scalable-management-for-modern-developments.jpg",
             imageLeft: false,
           },
         ]}
@@ -91,29 +93,34 @@ const page = () => {
           {
             title: "Unified Smart Integration Platform",
             desc: "Connects devices, sensors, and services across residential units and common areas.",
-            image: "/tech/return-line.jpg",
+            image:
+              "/solutions/highrise-community-automation/Unified Smart Integration Platform.jpg",
           },
           {
             title: "Scenario Automation",
             desc: "Predefined scenes automate lighting, AC, curtains, and other connected systems.",
-            image: "/tech/low-noise.jpg",
+            image:
+              "/solutions/highrise-community-automation/Scenario-Automation.jpg",
           },
         ]}
         firstRow={[
           {
             title: "Remote Access & Monitoring",
             desc: "Residents and management can control and monitor systems through mobile apps and control panels.",
-            image: "/tech/air-powered.jpg",
+            image:
+              "/solutions/highrise-community-automation/remote-access-and-monitoring.webp",
           },
           {
             title: "Intelligent Scheduling",
             desc: "Automated schedules optimize energy usage across apartments and shared spaces.",
-            image: "/tech/inlet-design.jpg",
+            image:
+              "/solutions/highrise-community-automation/intelligent-automation.jpg",
           },
           {
             title: "Community Management Dashboard",
             desc: "Centralized platform for visitor logs, access monitoring, facility management, and resident communication",
-            image: "/tech/centralized.jpg",
+            image:
+              "/solutions/highrise-community-automation/community-dashboard.png",
           },
         ]}
       />
@@ -121,7 +128,7 @@ const page = () => {
         eyebrow="Architect & Developer Corner"
         subtitle="Supporting Smarter, More Liveable Residential Development"
         description="Integrated automation is becoming a defining feature of premium residential projects."
-        image="/sections/architect-corner.jpg"
+        image="/solutions/highrise-community-automation/platform-solutions.jpg"
         imageAlt="Laundry inlet installation"
         intro="Our solutions support architects, interior consultants, and property developers in creating communities that:"
         bullets={[

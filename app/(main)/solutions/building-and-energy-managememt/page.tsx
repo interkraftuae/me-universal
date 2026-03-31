@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <HeroSection
-        img={"ai-powered-laundry/banner.png"}
+        img={"/solutions/building-and-energy-managememt/banner.jpg"}
         title={"Intelligent Building Automation & Energy Management"}
         desc={"Smarter Buildings. Smarter Control."}
       />
@@ -33,7 +33,7 @@ const page = () => {
               "Centralized dashboard for facility and operations teams",
               "Creates more comfortable, productive work environments",
             ],
-            img: "",
+            img: "/solutions/building-and-energy-managememt/smart-workplace.jpg",
           },
           {
             title: "Hospitality & Guest Experience Automation",
@@ -44,7 +44,7 @@ const page = () => {
               "Supports energy-saving modes when rooms are unoccupied",
               "Enhances operational efficiency for hospitality teams",
             ],
-            img: "",
+            img: "/solutions/building-and-energy-managememt/hospitality-and-guest-experiencewebp.webp",
           },
           {
             title: "Commercial Building Energy & Infrastructure Management",
@@ -55,7 +55,7 @@ const page = () => {
               "Supports centralized building control and facility management",
               "Scalable architecture for large multi-building environments",
             ],
-            img: "",
+            img: "/solutions/building-and-energy-managememt/Commercial-Building.png",
           },
         ]}
       />
@@ -65,14 +65,15 @@ const page = () => {
             num: "01",
             title: "Unified Multi-Protocol Interoperability",
             desc: "Modern buildings often suffer from 'siloed' systems where HVAC, lighting, and security cannot communicate. Our platform breaks these barriers by supporting global automation standards including KNX, BACnet, Modbus, and Matter. This allows architects and MEP consultants to specify the best hardware for each task, knowing our centralized automation architecture will unify them into a single, seamless ecosystem. Whether it is a luxury hospitality suite or a high-traffic commercial tower, our modular controllers integrate into existing electrical panels and IT racks, providing a 'brain' for the building.",
-            image: "/features/architectural-integration.jpg",
+            image:
+              "/solutions/building-and-energy-managememt/unified-multi-protocol-interoperability.jpg",
             imageLeft: true,
           },
           {
             num: "02",
             title: "Data-Driven Efficiency & Scalability",
             desc: "Our systems are designed to grow alongside your infrastructure, from a single smart office to a multi-building corporate campus. By integrating Real-Time Energy Monitoring and occupancy-based controls, the system automatically optimizes climate and lighting based on actual usage, significantly reducing operational overhead and supporting green building certifications. Facility managers gain a centralized dashboard for remote access, allowing for granular control over every square meter. This scalable approach ensures that your building remains high-performing, sustainable, and adaptable to the changing needs of its occupants.",
-            image: "/features/scalable-design.jpg",
+            image: "/solutions/building-and-energy-managememt/data-driven-efficiency.jpg",
             imageLeft: false,
           },
         ]}
@@ -86,29 +87,34 @@ const page = () => {
           {
             title: "Remote Access & Smart Control",
             desc: "Facility managers can monitor and control systems securely via web or mobile applications.",
-            image: "/tech/return-line.jpg",
+            image:
+              "/solutions/building-and-energy-managememt/remote-access.jpeg",
           },
           {
             title: "Scalable Smart Infrastructure",
             desc: "Designed to support projects ranging from single offices to multi-building campuses",
-            image: "/tech/low-noise.jpg",
+            image:
+              "/solutions/building-and-energy-managememt/scalable-smart-infrastructure.jpg",
           },
         ]}
         firstRow={[
           {
             title: "Multi-Protocol Integration",
             desc: "Supports global automation standards including KNX, BACnet, Modbus, MQTT, EnOcean, and Matter for seamless interoperability.",
-            image: "/tech/air-powered.jpg",
+            image:
+              "/solutions/building-and-energy-managememt/multi-protocol-integration.jpg",
           },
           {
             title: "Centralized Automation Platform",
             desc: "Unifies lighting, HVAC, shading, security, and multimedia control within one intelligent interface.",
-            image: "/tech/inlet-design.jpg",
+            image:
+              "/solutions/building-and-energy-managememt/centralized-automation-platform.webp",
           },
           {
             title: "Real-Time Energy Monitoring",
             desc: "Tracks building energy consumption with detailed analytics and performance insights.",
-            image: "/tech/centralized.jpg",
+            image:
+              "/solutions/building-and-energy-managememt/real-time-energy-monitoring.jpg",
           },
         ]}
       />
@@ -116,7 +122,7 @@ const page = () => {
         eyebrow="Architect & Developer Corner"
         subtitle="Supporting Smarter, More Efficient Building Design"
         description="Smart automation is becoming an essential component of modern building infrastructure."
-        image="/sections/architect-corner.jpg"
+        image="/solutions/building-and-energy-managememt/smart-automation.jpg"
         imageAlt="Laundry inlet installation"
         intro="Our systems support architects, MEP consultants, and developers in designing buildings that:"
         bullets={[

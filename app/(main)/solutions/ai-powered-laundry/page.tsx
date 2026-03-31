@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <HeroSection
-        img={"ai-powered-laundry/banner.png"}
+        img={"/solutions/ai-powered-laundry/banner.png"}
         title={"AI Powered Laundry Collection System"}
         desc={"Simplify Laundry. Streamline Movement."}
       />
@@ -33,7 +33,7 @@ const page = () => {
               "Safe, quiet, and family-friendly operation",
               "Adds premium automation value to modern homes",
             ],
-            img: "",
+            img: "/solutions/ai-powered-laundry/residential-laundry.png",
           },
           {
             title: "Hospitality Laundry Collection System",
@@ -44,7 +44,7 @@ const page = () => {
               "Improves operational workflow efficiency",
               "Supports faster room turnaround",
             ],
-            img: "",
+            img: "/solutions/ai-powered-laundry/hospitality-laundry.webp",
           },
           {
             title: "Healthcare & Commercial Laundry System",
@@ -55,7 +55,7 @@ const page = () => {
               "Heavy-duty performance for continuous operation",
               "Optimized for high-volume environments",
             ],
-            img: "",
+            img: "/solutions/ai-powered-laundry/healthcare-and-Commercial-.webp",
           },
         ]}
       />
@@ -65,14 +65,15 @@ const page = () => {
             num: "01",
             title: "Smart Architectural Integration",
             desc: "Our air-powered transport networks are engineered to disappear into your building’s infrastructure. By utilizing smooth, anti-static piping that can be routed through wall cavities, ceilings, or service shafts, we eliminate the need for bulky laundry chutes and oversized service corridors. This allows architects and MEP consultants to reclaim valuable square footage while maintaining the aesthetic integrity of the space. Whether it is a luxury villa or a multi-story hotel, the system integrates seamlessly into the original architectural intent without requiring massive structural changes.",
-            image: "/features/architectural-integration.jpg",
+            image:
+              "/solutions/ai-powered-laundry/smart-architectural-integration.jpg",
             imageLeft: true,
           },
           {
             num: "02",
             title: "Scalable & Mission-Specific Design",
             desc: "From single-point inlets in private residential closets to heavy-duty, high-volume networks in healthcare facilities, our modular technology adapts to your specific operational load. The system is designed to grow with your project allowing for additional discreet inlet points or even an Optional Return Line for clean linens. By automating the movement of laundry directly to centralized washer-feed areas, we minimize cross-floor traffic and elevator congestion, ensuring your facility operates at peak efficiency regardless of its size or complexity.",
-            image: "/features/scalable-design.jpg",
+            image: "/solutions/ai-powered-laundry/scalable-laundry.avif",
             imageLeft: false,
           },
         ]}
@@ -86,29 +87,29 @@ const page = () => {
           {
             title: "Optional Return Line",
             desc: "Premium installations allow clean laundry to be returned to specific zones",
-            image: "/tech/return-line.jpg",
+            image: "/solutions/ai-powered-laundry/laundry-return-line.jpg",
           },
           {
             title: "Low Noise & Energy Optimized",
             desc: "Quiet operation with controlled energy consumption for continuous use",
-            image: "/tech/low-noise.jpg",
+            image: "/solutions/ai-powered-laundry/low-noise-laundry.webp",
           },
         ]}
         firstRow={[
           {
             title: "Air-Powered Transfer System",
             desc: "Creates negative air pressure to move laundry swiftly through smooth, anti-static piping networks.",
-            image: "/tech/air-powered.jpg",
+            image: "/solutions/ai-powered-laundry/air-powered-transfer.jpg",
           },
           {
             title: "Discreet Inlet Design",
             desc: "Wall, ceiling, or closet-mounted inlets integrate seamlessly into architectural layouts",
-            image: "/tech/inlet-design.jpg",
+            image: "/solutions/ai-powered-laundry/discreet-inlet-design.jpg",
           },
           {
             title: "Centralized Collection",
             desc: "All laundry is delivered directly to a designated collection or washer-feed area",
-            image: "/tech/centralized.jpg",
+            image: "/solutions/ai-powered-laundry/centralized-collection.avif",
           },
         ]}
       />
@@ -116,7 +117,7 @@ const page = () => {
         eyebrow="Architect & Developer Corner"
         subtitle="Supporting Smarter, More Efficient Building Design"
         description="Efficient internal logistics is becoming a key part of modern building planning."
-        image="/sections/architect-corner.jpg"
+        image="/solutions/ai-powered-laundry/paltoform-solutions.jpg"
         imageAlt="Laundry inlet installation"
         intro="Our systems support architects, MEP consultants, and developers in creating buildings that:"
         bullets={[

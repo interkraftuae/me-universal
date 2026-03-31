@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <HeroSection
-        img={"ai-powered-laundry/banner.png"}
+        img={"/solutions/retrofit-wireless-automation/banner.jpg"}
         title={"Retrofit Wireless Automation System"}
         desc={"Smarter Spaces. Zero Disruption."}
       />
@@ -34,7 +34,7 @@ const page = () => {
               "Mobile-based desk reservation with floor plan view",
               "Usage analytics for optimized workspace utilization",
             ],
-            img: "",
+            img: "/solutions/retrofit-wireless-automation/smart-workstation-management.jpg",
           },
           {
             title: "Smart Meeting Room Management",
@@ -46,7 +46,7 @@ const page = () => {
               "Reservation system with door display and notifications",
               "Energy optimization through smart HVAC control",
             ],
-            img: "",
+            img: "/solutions/retrofit-wireless-automation/smart-meeting-room.jpg",
           },
           {
             title: "Smart Training Room Automation",
@@ -58,7 +58,7 @@ const page = () => {
               "Automated scene control for different training modes",
               "Centralized control with minimal manual intervention",
             ],
-            img: "",
+            img: "/solutions/retrofit-wireless-automation/smart-training-room-Automation.webp",
           },
           {
             title: "Smart Restroom Management",
@@ -70,7 +70,7 @@ const page = () => {
               "Smoking detection with alerts and notifications",
               "Energy and water consumption monitoring",
             ],
-            img: "",
+            img: "/solutions/retrofit-wireless-automation/smart-restroom-management.jpg",
           },
           {
             title: "Smart Cleaning Management",
@@ -82,7 +82,7 @@ const page = () => {
               "Task completion monitoring and reporting",
               "Data-driven optimization of cleaning operations",
             ],
-            img: "",
+            img: "/solutions/retrofit-wireless-automation/smart-cleaning-management.png",
           },
         ]}
       />
@@ -92,14 +92,16 @@ const page = () => {
             num: "01",
             title: "Zero-Disruption Retrofit Capability",
             desc: "Upgrading a building's intelligence no longer requires tearing down walls or installing miles of cabling. Our systems utilize EnOcean Energy Harvesting to deploy battery-free, wireless sensors that power themselves through light, motion, or temperature changes. This modularity is ideal for occupied offices, heritage buildings, or hospitals where downtime is not an option. Architects can instantly transform 'dumb' infrastructure into a data-rich environment by mounting sensors onto existing surfaces, ensuring a high-tech upgrade with zero civil works and zero disruption to daily operations.",
-            image: "/features/architectural-integration.jpg",
+            image:
+              "/solutions/retrofit-wireless-automation/placing-a-small-wireless-sensor.jpg",
             imageLeft: true,
           },
           {
             num: "02",
             title: "Data-Driven Operational Intelligence",
             desc: "Beyond simple control, our wireless network acts as a continuous sensory organ that adapts to the real-time heartbeat of your workspace. From Smart Restroom alerts triggered by footfall to Workstation Monitoring that optimizes desk utilization, the system feeds CO₂, humidity, and occupancy data into a unified Cloud-Based Platform. This empowers developers and MEP consultants to implement automation that is reactive rather than scheduled, ensuring even the oldest buildings can scale effortlessly to meet modern sustainability goals and high-performance building standards",
-            image: "/features/scalable-design.jpg",
+            image:
+              "/solutions/retrofit-wireless-automation/data-driven-operational-intelligence.png",
             imageLeft: false,
           },
         ]}
@@ -113,29 +115,34 @@ const page = () => {
           {
             title: "Energy Harvesting Sensors",
             desc: "Battery-free wireless sensors powered by motion, light, or temperature differences.",
-            image: "/tech/return-line.jpg",
+            image:
+              "/solutions/retrofit-wireless-automation/energy-harvesting.jpeg",
           },
           {
             title: "Unified Gateway Connectivity",
             desc: "Single gateway connects sensors, switches, actuators, and smart devices through a unified protocol.",
-            image: "/tech/low-noise.jpg",
+            image:
+              "/solutions/retrofit-wireless-automation/one-central-device-multiple-connected-nodes.jpg",
           },
         ]}
         firstRow={[
           {
             title: "Comprehensive Environmental Monitoring",
             desc: "Tracks temperature, humidity, CO₂, air quality, noise, illumination, and occupancy.",
-            image: "/tech/air-powered.jpg",
+            image:
+              "/solutions/retrofit-wireless-automation/close-up-of-small-modern-sensor.jpeg",
           },
           {
             title: "Automated Building Control",
             desc: "Sensor data automatically controls lighting, HVAC, curtains, motors, and power systems.",
-            image: "/tech/inlet-design.jpg",
+            image:
+              "/solutions/retrofit-wireless-automation/smart-office-environmental-sensors-temperature.jpg",
           },
           {
             title: "Cloud-Based Monitoring Platform",
             desc: "Real-time visualization, system monitoring, and data analytics through web and mobile dashboards.",
-            image: "/tech/centralized.jpg",
+            image:
+              "/solutions/retrofit-wireless-automation/laptop-mobile-screens-with-dashboard.jpeg",
           },
         ]}
       />
@@ -143,7 +150,7 @@ const page = () => {
         eyebrow="Architect & Developer Corner"
         subtitle="Supporting Smarter, More Efficient Building Design"
         description="Wireless retrofit automation is becoming a defining feature of intelligent, future-ready buildings."
-        image="/sections/architect-corner.jpg"
+        image="/solutions/retrofit-wireless-automation/platform-solutions.jpg"
         imageAlt="Laundry inlet installation"
         intro="Our systems support architects, MEP consultants, and facility managers in creating spaces that:"
         bullets={[

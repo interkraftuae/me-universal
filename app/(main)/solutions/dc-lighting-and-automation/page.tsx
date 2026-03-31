@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <HeroSection
-        img={"ai-powered-laundry/banner.png"}
+        img={"/solutions/dc-lighting-and-automation/banner.jpg"}
         title={"DC Lighting & Automation "}
         desc={"Smarter Power. Intelligent Control."}
       />
@@ -34,7 +34,7 @@ const page = () => {
               "Centralized lighting monitoring and control",
               "Scalable network architecture for modern buildings",
             ],
-            img: "",
+            img: "/solutions/dc-lighting-and-automation/persqm.jpg",
           },
           {
             title: "RTI – Smart Automation Control",
@@ -46,7 +46,7 @@ const page = () => {
               "Integration with smart home and AV infrastructure",
               "Flexible solution for residential and commercial environments",
             ],
-            img: "",
+            img: "/solutions/dc-lighting-and-automation/smart-auto-light.jpeg",
           },
           {
             title: "Moorgen – Luxury Smart Living Systems",
@@ -58,7 +58,7 @@ const page = () => {
               "Centralized control of connected smart systems",
               "Scalable automation platform for premium residences",
             ],
-            img: "",
+            img: "/solutions/dc-lighting-and-automation/moorgen-luxury.jpg",
           },
         ]}
       />
@@ -68,14 +68,16 @@ const page = () => {
             num: "01",
             title: "Simplified Low-Voltage Infrastructure",
             desc: "Our DC-powered systems redefine how buildings are wired, replacing heavy AC cabling with streamlined, Plug-and-Play Ethernet Architecture. By delivering power and data through a single cable, we eliminate the need for complex conduits and bulky drivers at every fixture. This modularity allows architects and MEP consultants to design cleaner ceilings and more flexible floor plans. Whether integrating Persqm X-PoE for an office or Moorgen luxury controls for a villa, the hardware integrates discreetly into the interior design, reducing installation complexity while significantly lowering long-term maintenance costs.",
-            image: "/features/architectural-integration.jpg",
+            image:
+              "/solutions/dc-lighting-and-automation/low-voltage-lights.webp",
             imageLeft: true,
           },
           {
             num: "02",
             title: "Unified Intelligent Ecosystems",
             desc: "Beyond simple illumination, our solutions serve as the digital backbone of a modern building. Our systems are designed for full interoperability, supporting industry-standard protocols such as KNX, BACnet, and Modbus. This ensures that lighting, climate, and AV systems powered by platforms like RTI work in perfect harmony rather than as isolated silos. This 'future-ready' adaptability means that as technology evolves, your space can be reconfigured or upgraded through software and simple network expansions, ensuring the building remains efficient and intelligent for years to come",
-            image: "/features/scalable-design.jpg",
+            image:
+              "/solutions/dc-lighting-and-automation/unified-lighting.webp",
             imageLeft: false,
           },
         ]}
@@ -89,29 +91,33 @@ const page = () => {
           {
             title: "Interoperable Building Integration",
             desc: "Compatible with enterprise integration systems such as KNX, BACnet, Modbus, and IoT devices",
-            image: "/tech/return-line.jpg",
+            image:
+              "/solutions/dc-lighting-and-automation/interoperable-building-integration.webp",
           },
           {
             title: "Low Noise & Energy Optimized",
             desc: "Quiet operation with controlled energy consumption for continuous use",
-            image: "/tech/low-noise.jpg",
+            image: "/solutions/dc-lighting-and-automation/Low-Noise.webp",
           },
         ]}
         firstRow={[
           {
             title: "Direct Current Lighting Distribution",
             desc: "Power is delivered through low-voltage Ethernet networks, reducing energy conversion losses and simplifying infrastructure.",
-            image: "/tech/air-powered.jpg",
+            image:
+              "/solutions/dc-lighting-and-automation/direct-current-lighting-distribution.jpg",
           },
           {
             title: "Intelligent Automation Integration",
             desc: "Platforms like RTI and Moorgen enable centralized control of lighting, HVAC, media, and smart devices.",
-            image: "/tech/inlet-design.jpg",
+            image:
+              "/solutions/dc-lighting-and-automation/intelligent-automation-integration.jpg",
           },
           {
             title: "Plug-and-Play Ethernet Architecture",
             desc: "Standard Ethernet cabling simplifies installation and allows easy expansion for new devices and automation systems.",
-            image: "/tech/centralized.jpg",
+            image:
+              "/solutions/dc-lighting-and-automation/Ethernet-Architecture.webp",
           },
         ]}
       />
@@ -119,7 +125,7 @@ const page = () => {
         eyebrow="Architect & Developer Corner"
         subtitle="Enabling Smarter, Future-Ready Building Design"
         description="Lighting infrastructure plays a major role in both building efficiency and interior flexibility."
-        image="/sections/architect-corner.jpg"
+        image="/solutions/dc-lighting-and-automation/platform-solutions.webp"
         imageAlt="Laundry inlet installation"
         intro="Our systems support architects, MEP consultants, and developers in creating buildings that:"
         bullets={[

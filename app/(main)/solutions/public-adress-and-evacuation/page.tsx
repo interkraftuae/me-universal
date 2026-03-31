@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <HeroSection
-        img={"ai-powered-laundry/banner.png"}
+        img={"/solutions/public-adress-and-evacuation/banner.jpg"}
         title={"Public Address & Voice Evacuation Systems"}
         desc={"Be Heard. Be Safe. Every Time."}
       />
@@ -33,7 +33,7 @@ const page = () => {
               "Expandable up to 160 zones with speaker line supervision",
               "EN54-certified with full fire alarm panel integration",
             ],
-            img: "",
+            img: "/solutions/public-adress-and-evacuation/Public-Address.png",
           },
           {
             title: "Professional Amplifiers & Sound Systems",
@@ -45,7 +45,7 @@ const page = () => {
               "Digital line array loudspeakers with directivity control",
               "Professional loudspeakers with subwoofer configurations",
             ],
-            img: "",
+            img: "/solutions/public-adress-and-evacuation/professional-amplifiers.jpg",
           },
           {
             title: "Conference & Presentation Systems",
@@ -57,7 +57,7 @@ const page = () => {
               "Motorized pop-up monitor lifts for paperless setups",
               "Wireless presentation with AirPlay and encrypted transmission",
             ],
-            img: "",
+            img: "/solutions/public-adress-and-evacuation/conference-presentation-Systems.webp",
           },
           {
             title: "Emergency Talk Back & Intercom Systems",
@@ -69,7 +69,7 @@ const page = () => {
               "Emergency video intercom with HD camera and LCD display",
               "SIP/IP speakers for wide-area emergency communication",
             ],
-            img: "",
+            img: "/solutions/public-adress-and-evacuation/EMERGENCY-TALK-BACK.png",
           },
           {
             title: "Nurse Call System",
@@ -81,7 +81,7 @@ const page = () => {
               "Corridor displays and LED indicators for alerts",
               "Telephone integration with full monitoring capability",
             ],
-            img: "",
+            img: "/solutions/public-adress-and-evacuation/nurse-call-system.jpg",
           },
           {
             title: "Fire Alarm System",
@@ -93,7 +93,7 @@ const page = () => {
               "Smoke, heat, and multi-sensor detectors",
               "Manual call points, sounders, and notification devices",
             ],
-            img: "",
+            img: "/solutions/public-adress-and-evacuation/fire-alarm-home-safety.webp",
           },
           {
             title: "CCTV Surveillance System",
@@ -104,7 +104,7 @@ const page = () => {
               "IP dome, bullet, PTZ, and smart IR cameras",
               "Scalable IP network over Cat6 infrastructure",
             ],
-            img: "",
+            img: "/solutions/public-adress-and-evacuation/cctv-surveillance-system.jpeg",
           },
           {
             title: "Loudspeakers",
@@ -115,7 +115,7 @@ const page = () => {
               "IP-based speakers for networked audio systems",
               "Compatible with conventional and IP-based PA systems",
             ],
-            img: "",
+            img: "/solutions/public-adress-and-evacuation/loudspeaker-system.jpg",
           },
           {
             title: "Induction Loop System",
@@ -127,7 +127,7 @@ const page = () => {
               "AGC limiter with loop integrity monitoring",
               "Integrated mixer with tone control",
             ],
-            img: "",
+            img: "/solutions/public-adress-and-evacuation/Contacta_portable_loop_system.jpg",
           },
         ]}
       />
@@ -137,14 +137,14 @@ const page = () => {
             num: "01",
             title: "Unified Networked Architecture",
             desc: "Modern safety shouldn't require separate, clunky infrastructures. Our IP-Based PAVA systems integrate seamlessly into your building’s standard LAN, allowing for a unified backbone that manages everything from background music to emergency voice evacuation. This modularity allows architects and MEP consultants to design for 4 to 160+ zones without a massive hardware footprint. By consolidating fire alarms, CCTV, and public address under a single EN54-certified platform, we reduce the complexity of service shafts and control rooms, ensuring that life-safety infrastructure remains as discreet as it is dependable.",
-            image: "/features/architectural-integration.jpg",
+            image: "/solutions/public-adress-and-evacuation/unified-arch.jpeg",
             imageLeft: true,
           },
           {
             num: "02",
             title: "Aesthetic and Inclusive Sound Design",
             desc: "We believe safety should adapt to the environment, not the other way around. Our range of high-fidelity loudspeakers including ceiling, pendant, and garden variants ensures the system matches the interior intent of any space, from luxury lobbies to transport hubs. Furthermore, our commitment to inclusivity ensures that all occupants are protected; through Induction Loop Systems, we provide hearing-aid users with crystal-clear emergency communications. This adaptability ensures your project meets the highest international compliance standards while enhancing the daily experience of every occupant.",
-            image: "/features/scalable-design.jpg",
+            image: "/solutions/public-adress-and-evacuation/sound-design.jpeg",
             imageLeft: false,
           },
         ]}
@@ -158,29 +158,29 @@ const page = () => {
           {
             title: "EN54 Certified Hardware",
             desc: "Life-safety compliant PAVA equipment designed to meet international fire safety standards.",
-            image: "/tech/return-line.jpg",
+            image: "/solutions/public-adress-and-evacuation/en52-certified.avif",
           },
           {
             title: "Integrated Control Software",
             desc: "Centralized platform for announcements, visual displays, monitoring, and system management.",
-            image: "/tech/low-noise.jpg",
+            image: "/solutions/public-adress-and-evacuation/alarm_system.png",
           },
         ]}
         firstRow={[
           {
             title: "IP-Based System Architecture",
             desc: "Operates over standard LAN infrastructure with distributed processing and network-wide monitoring.",
-            image: "/tech/air-powered.jpg",
+            image: "/solutions/public-adress-and-evacuation/ip-based.jpg",
           },
           {
             title: "Fire Alarm & System Integration",
             desc: "Interfaces with fire panels and building systems for coordinated emergency communication.",
-            image: "/tech/inlet-design.jpg",
+            image: "/solutions/public-adress-and-evacuation/Fire-System-Integration.webp",
           },
           {
             title: "Scalable Zone Configuration",
             desc: "Flexible zone architecture that supports expansion from small buildings to large multi-facility campuses.",
-            image: "/tech/centralized.jpg",
+            image: "/solutions/public-adress-and-evacuation/scalable-zone-configuration.jpeg",
           },
         ]}
       />
@@ -188,7 +188,7 @@ const page = () => {
         eyebrow="Architect & Developer Corner"
         subtitle="Supporting Safe, Compliant & Future-Ready Building Design"
         description="Our systems support architects, MEP consultants, and facility managers in creating spaces that:"
-        image="/sections/architect-corner.jpg"
+        image="/solutions/public-adress-and-evacuation/platform-solutions.png"
         imageAlt="Laundry inlet installation"
         intro="Our systems support architects, MEP consultants, and developers in creating buildings that:"
         bullets={[

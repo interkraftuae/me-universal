@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <HeroSection
-        img={"ai-powered-laundry/banner.png"}
+        img={"/solutions/office-and-av-automation/banner.jpg"}
         title={"Office & AV Automation Solutions"}
         desc={"Intelligent Control for Modern Workspaces"}
       />
@@ -34,7 +34,7 @@ const page = () => {
               "Automate lighting, projection, screens, and audio settings",
               "Simplifies setup and operation of meetings and presentations",
             ],
-            img: "",
+            img: "/solutions/office-and-av-automation/conference-room-control.jpg",
           },
           {
             title: "Audio-Visual System Control",
@@ -46,7 +46,7 @@ const page = () => {
               "Reduces complexity of operating multiple AV systems",
               "Designed for professional commercial environments",
             ],
-            img: "",
+            img: "/solutions/office-and-av-automation/centralized-control.avif",
           },
           {
             title: "Centralized Device Control Platforms",
@@ -58,7 +58,7 @@ const page = () => {
               "Supports automation of various technology functions",
               "Built for reliable commercial operation",
             ],
-            img: "",
+            img: "/solutions/office-and-av-automation/centralized-device-control.webp",
           },
           {
             title: "Commercial Automation Integration",
@@ -70,7 +70,7 @@ const page = () => {
               "Enables synchronized operation of multiple technologies",
               "Ideal for offices, classrooms, and commercial facilities",
             ],
-            img: "",
+            img: "/solutions/office-and-av-automation/commerical-integeration.png",
           },
         ]}
       />
@@ -80,14 +80,16 @@ const page = () => {
             num: "01",
             title: "Intuitive Workspace Synergy",
             desc: "Modern boardrooms and classrooms shouldn't be defined by a clutter of remotes and cables. Our automation solutions are designed to disappear into the architectural fabric of the workspace, replacing complex manual setups with a single, streamlined interface. Whether it is a wall-mounted touchpanel or a mobile device, our technology integrates directly with your lighting, climate, and AV hardware. This modular approach allows architects to design clean, collaborative spaces where the technology from motorized screens to audio levels adjusts instantly to the task at hand with the touch of a single button.",
-            image: "/features/architectural-integration.jpg",
+            image:
+              "/solutions/office-and-av-automation/intuitive-workspace-synergy.png",
             imageLeft: true,
           },
           {
             num: "02",
             title: "Scalable & Reliable Enterprise Control",
             desc: "Our platforms are built for the rigors of professional environments, offering a consistent control experience across an entire facility. From small huddle rooms to massive multi-floor corporate headquarters, the system’s architecture is fully scalable and interoperable. By centralizing the management of displays, projectors, and audio equipment into a unified control platform, we reduce the burden on IT and facility management. This ensures that your office infrastructure remains adaptable to new presentation technologies and evolving workplace trends, providing a reliable foundation for long-term operational performance.",
-            image: "/features/scalable-design.jpg",
+            image:
+              "/solutions/office-and-av-automation/Scale Visualization.png",
             imageLeft: false,
           },
         ]}
@@ -101,29 +103,33 @@ const page = () => {
           {
             title: "Centralized Control Systems",
             desc: "Users can manage displays, projectors, lighting, and audio equipment through a single control interface.",
-            image: "/tech/return-line.jpg",
+            image:
+              "/solutions/office-and-av-automation/centralized-control-systems.jpg",
           },
           {
             title: "Touchpanel-Based Room Automation",
             desc: "Meeting rooms can be controlled through wall-mounted touchpanels or handheld controllers.",
-            image: "/tech/low-noise.jpg",
+            image: "/solutions/office-and-av-automation/technology-detail.webp",
           },
         ]}
         firstRow={[
           {
-            title: " Mobile Device Integration",
+            title: "Mobile Device Integration",
             desc: "Control interfaces can also operate on smartphones and tablets for flexible system management.",
-            image: "/tech/air-powered.jpg",
+            image:
+              "/solutions/office-and-av-automation/mobile-device-integration.jpg",
           },
           {
-            title: " Reliable Commercial Automation",
+            title: "Reliable Commercial Automation",
             desc: "Designed for professional environments where dependable control of technology systems is essential.",
-            image: "/tech/inlet-design.jpg",
+            image:
+              "/solutions/office-and-av-automation/reliable-commercial-automation.jpg",
           },
           {
-            title: "Centralized Collection",
-            desc: "All laundry is delivered directly to a designated collection or washer-feed area",
-            image: "/tech/centralized.jpg",
+            title: "Unified Control Platform",
+            desc: "All connected systems are managed from a single interface, ensuring streamlined operation and efficiency.",
+            image:
+              "/solutions/office-and-av-automation/unified-control-platform.jpg",
           },
         ]}
       />
@@ -131,7 +137,7 @@ const page = () => {
         eyebrow="Architect & Developer Corner"
         subtitle="Supporting Technology-Enabled Workplace Design"
         description="Modern commercial buildings rely on integrated technology systems to support efficient workplace operations."
-        image="/sections/architect-corner.jpg"
+        image="/solutions/office-and-av-automation/Scale Visualization.png"
         imageAlt="Laundry inlet installation"
         intro="Our systems support architects, MEP consultants, and developers in creating buildings that:"
         bullets={[
