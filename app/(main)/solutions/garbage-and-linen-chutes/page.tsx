@@ -88,24 +88,28 @@ const page = () => {
           {
             title: "Electrical & Plumbing Works",
             desc: "Electrical and plumbing preparations are completed according to project layouts and system requirements during installation.",
-            image: "/solutions/garbage-and-linen-chutes/elecctrical-and-plumbing-work.png",
+            image:
+              "/solutions/garbage-and-linen-chutes/elecctrical-and-plumbing-work.png",
           },
           {
             title: "Chute Wall Erection",
             desc: "After installation works inside the shaft are completed, wall construction is finalized as per the project drawings and layouts.",
-            image: "/solutions/garbage-and-linen-chutes/chute-wall-erection.webp",
+            image:
+              "/solutions/garbage-and-linen-chutes/chute-wall-erection.webp",
           },
         ]}
         firstRow={[
           {
             title: "Segregated Chute Concept",
             desc: "Chute systems can support organized waste or linen transfer through dedicated inlets and shafts.",
-            image: "/solutions/garbage-and-linen-chutes/segregated-chute-concept.jpg",
+            image:
+              "/solutions/garbage-and-linen-chutes/segregated-chute-concept.jpg",
           },
           {
             title: "Chute System Components",
             desc: "The system consists of multiple structural components that ensure safe and efficient vertical movement from floor inlets to collection areas.",
-            image: "/solutions/garbage-and-linen-chutes/Chute-System-Components.webp",
+            image:
+              "/solutions/garbage-and-linen-chutes/Chute-System-Components.webp",
           },
           {
             title: " Duct Erection",
