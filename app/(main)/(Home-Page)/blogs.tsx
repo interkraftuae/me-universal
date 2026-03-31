@@ -1,25 +1,45 @@
-const articles = [
-  {
-    title: "Gorem ipsum dolor",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    img: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "Gorem ipsum dolor",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    img: "https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "Gorem ipsum dolor",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    img: "https://images.unsplash.com/photo-1631510390389-c1e4fb20ff31?q=80&w=1092&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+
+interface Blog {
+  id: string;
+  title: string;
+  content: string;
+  image: string;
+  author: string;
+  category: string;
+  createdAt: string;
+  slugTitle: string;
+}
+
 export default function NewsAndContact() {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch("/api/blogs");
+        const data = await res.json();
+
+        // take only latest 3 blogs
+        setBlogs(data.blogs.slice(0, 3));
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
   return (
-    <section className=" mt-20">
+    <section className="mt-20">
       <div className="container">
-        {/* ================= NEWS SECTION ================= */}
+        {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-4xl font-semibold font-montserrat tracking-wide">
             LATEST NEWS & ARTICLES
@@ -34,25 +54,37 @@ export default function NewsAndContact() {
 
         {/* Articles */}
         <div className="grid md:grid-cols-3 gap-8 mb-28">
-          {articles.map((item, index) => (
-            <div key={index} className="group">
-              <div className="relative w-full h-66 overflow-hidden rounded">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="object-cover group-hover:scale-105 transition"
-                />
-              </div>
+          {loading ? (
+            <p className="text-center col-span-3 text-gray-400">Loading...</p>
+          ) : (
+            blogs.map((blog) => (
+              <Link
+                key={blog.id}
+                href={`/blogs/${blog.slugTitle}`}
+                className="group"
+              >
+                <div className="relative w-full h-66 overflow-hidden rounded">
+                  <img
+                    src={`/api/uploads/${blog.image}`}
+                    alt={blog.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition"
+                  />
+                </div>
 
-              <h3 className="mt-4 font-semibold text-lg">{item.title}</h3>
+                <h3 className="mt-4 font-semibold text-lg line-clamp-2">
+                  {blog.title}
+                </h3>
 
-              <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
+                <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+                  {blog.category}
+                </p>
 
-              <button className="mt-3 text-indigo-600 text-sm flex items-center gap-1 hover:gap-2 transition">
-                Read Article →
-              </button>
-            </div>
-          ))}
+                <button className="mt-3 text-indigo-600 text-sm flex items-center gap-1 hover:gap-2 transition">
+                  Read Article →
+                </button>
+              </Link>
+            ))
+          )}
         </div>
       </div>
     </section>
