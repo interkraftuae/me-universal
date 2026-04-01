@@ -36,7 +36,7 @@ const Page = () => {
       <section className="bg-[#15141D] pt-44 pb-10">
         <div className="container flex justify-center h-full items-center">
           <div className="text-white text-center">
-            <h1 className="text-5xl mb-8 font-montserrat">Per Sqm concept</h1>
+            <h1 className="text-5xl mb-8 uppercase font-montserrat">Per Sqm concept</h1>
             <p className="text-2xl">See. Experience. Innovate.</p>
           </div>
         </div>

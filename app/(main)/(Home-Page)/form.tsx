@@ -66,7 +66,7 @@ const Form = () => {
 
             <button
               type="submit"
-              className="w-full btn py-3! rounded hover:bg-primary/80 transition"
+              className="w-full btn py-3! hover:bg-primary/80 transition"
             >
               Submit
             </button>

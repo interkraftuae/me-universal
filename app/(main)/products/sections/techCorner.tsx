@@ -20,9 +20,9 @@ const TechnologyCorner = ({
 }: TechnologyCornerProps) => {
   return (
     <section className="mt-20">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container ">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mx-auto max-w-5xl mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold uppercase tracking-widest text-[#1a1a1a] mb-4">
             {heading}
           </h2>
@@ -34,9 +34,9 @@ const TechnologyCorner = ({
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {cards.map((card, i) => (
-            <div key={i} className="relative overflow-hidden rounded-xl group">
+            <div key={i} className="relative overflow-hidden group">
               {/* Image */}
-              <div className="relative w-full h-[240px] md:h-[280px]">
+              <div className="relative w-full h-[240px] md:h-[340px]">
                 <Image
                   src={card.image}
                   alt={card.imageAlt ?? card.title}

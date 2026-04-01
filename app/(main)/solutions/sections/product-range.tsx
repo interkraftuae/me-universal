@@ -13,7 +13,7 @@ const ProductRange = ({
       <div className="container">
         <div className="flex gap-8 justify-center items-start ">
           <div className="w-full mt-3 h-0.5 bg-primary" />
-          <p className="text-primary">{titleText}</p>
+          <p className="text-primary md:text-nowrap">{titleText}</p>
         </div>
 
         <div className="mt-16 max-w-7xl mx-auto">
@@ -27,7 +27,12 @@ const ProductRange = ({
                 className={`grid p-5 lg:p-10 bg-linear-to-b  ${idx % 2 === 1 ? "from-[#FFEDEE]" : "from-[#F7FAFF]"} items-center grid-cols-1 lg:grid-cols-2 gap-10`}
               >
                 <div className="h-[320px] bg-gray-200 relative">
-                  <Image src={`${product.img}`} alt={""} className="object-cover" fill />
+                  <Image
+                    src={`${product.img}`}
+                    alt={""}
+                    className="object-cover"
+                    fill
+                  />
                 </div>
 
                 <div>

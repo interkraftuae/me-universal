@@ -40,7 +40,7 @@ const TimelineFeatureSection = ({
 
       setLineStyle({
         left: firstRect.left - containerRect.left + firstRect.width / 2,
-        top: first.offsetTop + firstRect.height / 2,
+        top: firstRect.top - containerRect.top + firstRect.height / 2, // ✅ use getBoundingClientRect consistently
         height: lastRect.top - firstRect.top,
       });
     };

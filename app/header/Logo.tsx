@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 const Logo = ({
   mode = "dark",
   className,
@@ -8,13 +8,19 @@ const Logo = ({
   mode: "dark" | "light";
 }) => {
   return (
-    <Image
-      src={mode === "dark" ? "/logo/logo-light.png" : "/logo/logo-dark.png"}
-      width={120}
-      height={120}
-      className={className}
-      alt={"MeUniversal Logo"}
-    />
+    <Link href="/">
+      <Image
+        src={
+          mode === "dark"
+            ? "/logo/Logo-light-trans.png"
+            : "/logo/mk_universal_no_bg.png"
+        }
+        width={100}
+        height={100}
+        className={className}
+        alt={"MeUniversal Logo"}
+      />
+    </Link>
   );
 };
 

@@ -648,7 +648,7 @@ const CareersPage = () => {
                 <button
                   type="submit"
                   disabled={loading || submitted}
-                  className={`w-full shadow-md disabled:bg-gray-400 font-rubik text-white flex items-center justify-center gap-2 font-semibold px-6 py-3 rounded-lg text-sm transition-all duration-300 hover:scale-[1.01] ${
+                  className={`w-full shadow-md disabled:bg-gray-400 font-rubik text-white flex items-center justify-center gap-2 font-semibold px-6 py-3 text-sm transition-all duration-300 hover:scale-[1.01] ${
                     submitted
                       ? "bg-green-500 hover:bg-green-600"
                       : errors.message

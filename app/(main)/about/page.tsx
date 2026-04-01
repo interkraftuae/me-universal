@@ -24,7 +24,6 @@ const missionData = [
     desc: "Work closely with developers, consultants, and operators to deliver consistent value across projects.",
   },
 ];
-import CTASection from "../sections/cta";
 const AboutPage = () => {
   return (
     <div className="bg-white">
