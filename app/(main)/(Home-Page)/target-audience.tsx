@@ -23,7 +23,7 @@ const TargetAudience = () => {
     <section className="bg-[#15141D] py-20">
       <div className="container text-center">
         <span className=" text-primary">// Our Target Audience</span>
-        <h1 className="font-montserrat mt-3 uppercase tracking-tight text-5xl text-gray-200">
+        <h1 className="font-montserrat mt-3 uppercase tracking-tight text-4xl font-semibold text-gray-200">
           Designed around your role
         </h1>
       </div>

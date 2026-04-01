@@ -20,7 +20,7 @@ const FeaturedProduct = () => {
   return (
     <div className="bg-[#15141D] mt-20 py-20">
       <div className="container">
-        <h1 className="text-gray-200 tracking-tight text-5xl mb-10 text-center font-montserrat">
+        <h1 className="text-gray-200 font-semibold tracking-tight text-4xl mb-10 text-center font-montserrat">
           Our Featured Products
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">

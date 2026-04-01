@@ -61,7 +61,7 @@ export default function ProtocolSection() {
         </p>
 
         {/* Heading */}
-        <h2 className="text-4xl font-montserrat mb-8">
+        <h2 className="text-4xl font-semibold font-montserrat mb-8">
           WORKS WITH EVERY STANDARD YOU SPECIFY
         </h2>
 
