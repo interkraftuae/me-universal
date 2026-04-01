@@ -28,51 +28,46 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className=" mt-20 ">
-      <div className="container text-center">
-        {/* Subtitle */}
-        <p className="text-primary text-sm tracking-widest mb-4">
-          // HOW WE WORK
-        </p>
-
-        {/* Heading */}
-        <h2 className="text-4xl uppercase font-semibold font-montserrat mb-14">
-          From Brief to Building - A Structured Process
-        </h2>
-
-        {/* Timeline */}
-        <div className="relative">
-          {/* Horizontal line */}
-
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 relative">
-            <div className="hidden lg:block absolute top-9 left-[10%] right-[10%] h-[2px] bg-primary/40 -translate-y-1/2" />
-
-            {/* Vertical line — mobile only */}
-            <div className="lg:hidden absolute left-1/2 -translate-x-1/2 top-16 bottom-16 w-[2px] bg-primary/40" />
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className={`flex relative flex-col items-center`}
-              >
-                {/* Circle */}
-                <div className="size-32  text-3xl lg:size-18 rounded-full hover:bg-primary hover:text-white transition-colors duration-200 border-2 border-primary flex items-center justify-center text-primary bg-white font-medium">
-                  {step.num}
-                </div>
-
-                {/* Title */}
-                <div className="bg-white py-2 lg:py-0 mt-6">
-                  <h3 className=" text-xl lg:text-lg font-medium font-roboto">
-                    {step.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="lg:text-xs text-gray-500 mt-2 max-w-[200px]">
-                    {step.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+    <section className="mt-24 bg-gray-50 py-20">
+      <div className="container">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+          <div>
+            <p className="text-primary text-xs tracking-widest mb-3">
+              // HOW WE WORK
+            </p>
+            <h2 className="text-4xl uppercase font-semibold font-montserrat leading-tight">
+              From Brief to Building
+              <br />A Structured Process
+            </h2>
           </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 relative">
+          {/* Connector line desktop */}
+          <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-px bg-primary/30" />
+
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center group relative px-4"
+            >
+              <div className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center text-primary font-bold text-sm bg-white group-hover:bg-primary group-hover:text-white transition-all duration-200 z-10 relative">
+                {step.num}
+              </div>
+              <div className="mt-5">
+                <div className="w-6 h-0.5 bg-primary mx-auto mb-3" />
+                <h3 className="text-sm font-semibold font-roboto tracking-wide mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed max-w-[160px] mx-auto">
+                  {step.desc}
+                </p>
+              </div>
+              {index < steps.length - 1 && (
+                <div className="lg:hidden w-px h-8 bg-primary/30 mt-4" />
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
