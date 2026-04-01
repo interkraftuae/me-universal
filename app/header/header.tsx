@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 const Header = () => {
   const menuLinks = [
-    { label: "Home", link: "/" },
     {
       label: "About us",
       link: "",
@@ -15,6 +14,7 @@ const Header = () => {
         { label: "About us", link: "/about" },
         { label: "Sustainability", link: "/sustainability" },
         { label: "Per sqm concept", link: "/per-sqm-concept" },
+        { label: "Careers", link: "/careers" },
       ],
     },
     {
@@ -92,8 +92,6 @@ const Header = () => {
         { label: "Mylo: Pool Monitoring ", link: "/platforms/mylo" },
       ],
     },
-    { label: "Blogs", link: "#" },
-    { label: "Careers", link: "/careers" },
   ];
   const [scrolled, setScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);

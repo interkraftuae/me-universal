@@ -209,14 +209,16 @@ export default function ProtocolSection() {
               key={index}
               className="protocol-cell p-6 border border-white/10 hover:bg-white/5 transition-colors group opacity-0"
             >
-              <div className="protocol-icon w-14 h-14 mb-4 opacity-0">
-                <Image
-                  width={56}
-                  height={56}
-                  src={`/home/icons/${item.img}.png`}
-                  alt={item.img}
-                  className="object-contain w-full h-full"
-                />
+              <div className="w-full h-auto flex justify-center">
+                <div className="protocol-icon w-28  mb-4 opacity-0">
+                  <Image
+                    width={56}
+                    height={56}
+                    src={`/home/icons/${item.img}.png`}
+                    alt={item.img}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
               </div>
               <p className="text-xs text-white/50 group-hover:text-white/70 leading-relaxed transition-colors">
                 {item.desc}

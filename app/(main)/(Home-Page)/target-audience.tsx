@@ -4,25 +4,29 @@ import { BadgeCheck } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-
+import { DraftingCompass, HardHat, TrendingUp, Wrench } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const cards = [
   {
     title: "Architects & Interior Designers",
-    desc: "We support architects and designers by integrating smart systems early in the design phase. Our team provides CAD-compatible layouts, product specifications, and visualization support, enabling seamless integration of smart technologies into modern architectural concepts.",
+    desc: "We support architects and designers by integrating smart systems early in the design phase...",
+    icon: DraftingCompass,
   },
   {
     title: "MEP & Specialist Consultants",
-    desc: "Our technical team works closely with consultants by providing BOQ preparation, protocol selection, system architecture planning, and detailed coordination drawings to ensure smart building technologies integrate efficiently with core building systems.",
+    desc: "Our technical team works closely with consultants by providing BOQ preparation...",
+    icon: HardHat,
   },
   {
     title: "Developers & Investors",
-    desc: "ME Universal helps developers evaluate the financial and operational benefits of smart building technologies, including energy optimization potential, building efficiency improvements, and long-term asset value enhancement.",
+    desc: "ME Universal helps developers evaluate the financial and operational benefits...",
+    icon: TrendingUp,
   },
   {
     title: "Engineering Companies",
-    desc: "We provide supply, integration, and technical partnership services for contractors and EPC companies, including product support, system integration, installation guidance, and post-deployment assistance.",
+    desc: "We provide supply, integration, and technical partnership services...",
+    icon: Wrench,
   },
 ];
 
@@ -166,7 +170,12 @@ const TargetAudience = () => {
               {/* Animated top line */}
               <div className="card-line w-8 h-0.5 bg-primary mb-6 scale-x-0" />
 
-              <BadgeCheck className="card-icon size-8 text-primary mb-6 opacity-0" />
+              {(() => {
+                const Icon = item.icon;
+                return (
+                  <Icon className="card-icon size-8 text-primary mb-6 opacity-0" />
+                );
+              })()}
 
               <h3 className="card-title text-base font-semibold mb-4 leading-snug opacity-0">
                 {item.title}
