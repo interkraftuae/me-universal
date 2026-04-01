@@ -21,6 +21,7 @@ const Page = () => {
         ]}
       />
       <ProductRange
+        gradient={true}
         object={"contain"}
         products={[
           {

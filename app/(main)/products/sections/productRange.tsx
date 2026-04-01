@@ -2,8 +2,10 @@ import Image from "next/image";
 const ProductRange = ({
   products,
   object = "cover",
+  gradient = false,
 }: {
   object?: string;
+  gradient?: boolean;
   products: { label: string; img: string; lists: string[] }[];
 }) => {
   return (
@@ -16,7 +18,7 @@ const ProductRange = ({
           {products.map((product, idx) => (
             <li key={idx}>
               <div
-                className={`w-full h-[370px] relative  ${object === "cover" ? "bg-gray-300" : "bg-gray-50"}`}
+                className={`w-full h-[370px] relative  ${object === "cover" ? "bg-gray-300" : "bg-[radial-gradient(ellipse_at_center,white,white,#ebebeb80)]"}`}
               >
                 <Image
                   src={`${product.img}`}
