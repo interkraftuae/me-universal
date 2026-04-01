@@ -20,7 +20,6 @@ export default function Home() {
       <ProtocolSection />
       <WhyChoose />
       <ProcessSection />
-      <FeaturedProduct />
       <Blogs />
       <Form />
     </div>

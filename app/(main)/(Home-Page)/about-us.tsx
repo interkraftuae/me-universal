@@ -202,7 +202,7 @@ export default function AboutSection() {
               className="relative w-full h-full rounded z-10 overflow-hidden opacity-0"
             >
               <Image
-                src="/home/about/about-bg.jpg"
+                src="/home/about/about-bg.jpeg"
                 alt="team"
                 fill
                 className="object-cover"

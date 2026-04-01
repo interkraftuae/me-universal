@@ -63,7 +63,6 @@ const Solutions = () => {
 
   return (
     <section className="mt-24">
-      {/* Header */}
       <div className="container mb-16">
         <p
           ref={labelRef}
@@ -118,7 +117,9 @@ const Solutions = () => {
 
 export default Solutions;
 
-const grid2 = [
+// ─── Data ────────────────────────────────────────────────────────────────────
+
+const secondaryItems = [
   { label: "Wireless Retrofit Automation", img: "wireless-retrofit.jpg" },
   { label: "Bathroom Ventilation System", img: "bathroom-ventilation.jpg" },
   { label: "Odor Control & Air Disinfection", img: "odor-control.png" },
@@ -129,159 +130,142 @@ const grid2 = [
   { label: "Digital Fragrance", img: "digital-fragnance.jpg" },
 ];
 
+// ─── Card ────────────────────────────────────────────────────────────────────
+
+const SolutionCard = ({
+  src,
+  label,
+  className = "",
+  imgClassName = "",
+}: {
+  src: string;
+  label: string;
+  className?: string;
+  imgClassName?: string;
+}) => (
+  <div
+    className={`grid-card bg-gray-50 group relative overflow-hidden opacity-0 ${className}`}
+  >
+    <Image
+      src={src}
+      alt={label}
+      fill
+      sizes="(max-width: 768px) 100vw, 50vw"
+      className={`object-cover transition duration-700 group-hover:scale-105 ${imgClassName}`}
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+    <p className="absolute bottom-0 left-0 right-0 text-white text-sm font-medium px-4 py-3 leading-snug">
+      {label}
+    </p>
+  </div>
+);
+
+// ─── Grid ────────────────────────────────────────────────────────────────────
+
 const SolutionGrid = () => {
-  const primaryGridRef = useRef<HTMLDivElement>(null);
-  const secondaryGridRef = useRef<HTMLDivElement>(null);
+  const primaryRef = useRef<HTMLDivElement>(null);
+  const secondaryRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Primary grid — big card + 4 cards stagger in
-      const primaryCards =
-        primaryGridRef.current?.querySelectorAll(".grid-card");
-      if (primaryCards) {
-        gsap.fromTo(
-          primaryCards,
-          { opacity: 0, y: 40, scale: 0.97 },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.75,
-            stagger: 0.1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: primaryGridRef.current,
-              start: "top 80%",
-              once: true,
-            },
-          },
-        );
-      }
-
-      // Secondary grid — clip reveal from bottom
-      const secondaryCards =
-        secondaryGridRef.current?.querySelectorAll(".grid-card");
-      if (secondaryCards) {
-        gsap.fromTo(
-          secondaryCards,
-          { opacity: 0, clipPath: "inset(100% 0% 0% 0%)" },
-          {
-            opacity: 1,
-            clipPath: "inset(0% 0% 0% 0%)",
-            duration: 0.65,
-            stagger: 0.07,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: secondaryGridRef.current,
-              start: "top 85%",
-              once: true,
-            },
-          },
-        );
-      }
-
-      // Parallax on the big left card image
-      const bigImg = primaryGridRef.current?.querySelector(".parallax-img");
-      if (bigImg) {
-        gsap.to(bigImg, {
-          yPercent: -12,
-          ease: "none",
+      gsap.fromTo(
+        primaryRef.current?.querySelectorAll(".grid-card") ?? [],
+        { opacity: 0, y: 36, scale: 0.97 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.75,
+          stagger: 0.09,
+          ease: "power3.out",
           scrollTrigger: {
-            trigger: bigImg,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
+            trigger: primaryRef.current,
+            start: "top 80%",
+            once: true,
           },
-        });
-      }
+        },
+      );
+
+      gsap.fromTo(
+        secondaryRef.current?.querySelectorAll(".grid-card") ?? [],
+        { opacity: 0, clipPath: "inset(100% 0% 0% 0%)" },
+        {
+          opacity: 1,
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 0.65,
+          stagger: 0.06,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: secondaryRef.current,
+            start: "top 85%",
+            once: true,
+          },
+        },
+      );
     });
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <div id="solutions" className="container">
-      {/* Primary Grid */}
+    <div id="solutions" className="container space-y-4">
+      {/* ── Primary grid ─────────────────────────────────────────────────────
+          Layout (desktop):
+            col 1 (wide): tall hero card spanning 2 rows
+            col 2 & 3:    2 × 2 standard cards
+          All cells use explicit min-h so nothing collapses.
+      ──────────────────────────────────────────────────────────────────────── */}
       <div
-        ref={primaryGridRef}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-4"
+        ref={primaryRef}
+        className="grid grid-cols-1 sm:grid-cols-2 h-[550px] lg:grid-cols-3 gap-4"
       >
-        {/* LEFT BIG CARD */}
-        <div className="grid-card group relative overflow-hidden opacity-0">
-          <div className="relative w-full h-[420px] overflow-hidden">
-            <Image
-              src="/home/solution/grid-1/dc-lighting.jpg"
-              alt="DC Lighting"
-              fill
-              className="parallax-img object-cover group-hover:scale-105 transition duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-          </div>
-          <p className="absolute bottom-0 left-0 right-0 text-white text-base font-medium p-5 translate-y-1 group-hover:translate-y-0 transition duration-300">
-            DC Lighting & Automation
+        {/* Hero — spans 2 rows on lg */}
+        <div className="grid-card group relative h-full overflow-hidden opacity-0 rounded-sm sm:row-span-2">
+          <Image
+            src="/home/solution/grid-1/dc-lighting.jpg"
+            alt="DC Lighting & Automation"
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="parallax-img object-cover h-full transition duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+          <p className="absolute bottom-8 left-0 right-0 text-white text-sm font-medium px-4 py-3 leading-snug">
+            DC Lighting &amp; Automation
           </p>
         </div>
 
-        {/* RIGHT: 2x2 */}
-        <div className="grid grid-cols-2 gap-4">
-          {[
-            {
-              src: "/home/solution/grid-1/ai-powered.jpg",
-              label: "Air Powered Laundry Collection",
-            },
-            {
-              src: "/home/solution/grid-1/centralized-vaccume.png",
-              label: "Centralised Vacuum Cleaning",
-            },
-            {
-              src: "/home/solution/grid-1/grabage-line.png",
-              label: "Garbage & Line Chutes",
-            },
-            {
-              src: "/home/solution/grid-1/building-automation.jpeg",
-              label: "Building Automation & Energy Mgmt",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="grid-card group relative overflow-hidden h-[200px] opacity-0"
-            >
-              <Image
-                src={item.src}
-                alt={item.label}
-                fill
-                className="object-cover group-hover:scale-105 transition duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <p className="absolute bottom-0 left-0 right-0 text-white text-sm p-3 translate-y-1 group-hover:translate-y-0 transition duration-300">
-                {item.label}
-              </p>
-            </div>
-          ))}
-        </div>
+        {/* 4 standard cards fill the remaining 2 × 2 area */}
+        <SolutionCard
+          src="/home/solution/grid-1/ai-powered.jpg"
+          label="Air Powered Laundry Collection"
+          className="rounded-sm"
+        />
+        <SolutionCard
+          src="/home/solution/grid-1/grabage-line.png"
+          label="Garbage & Line Chutes"
+          className="rounded-sm"
+        />
+        <SolutionCard
+          src="/solutions/centralised-vacuum/residential.jpg"
+          label="Centralised Vacuum Cleaning"
+          className="rounded-sm"
+        />
+        <SolutionCard
+          src="/solutions/building-and-energy-managememt/hospitality-and-guest-experiencewebp.webp"
+          label="Building Automation & Energy Mgmt"
+          className="rounded-sm"
+        />
       </div>
 
-      {/* Secondary Grid */}
-      <div
-        ref={secondaryGridRef}
-        className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-4"
-      >
-        {grid2.map((item, key) => (
-          <div
-            key={key}
-            className="grid-card group relative overflow-hidden h-[200px] opacity-0"
-          >
-            <Image
-              src={`/home/solution/grid-2/${item.img}`}
-              alt={item.label}
-              fill
-              className="object-cover group-hover:scale-105 transition duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-            <p className="absolute bottom-0 left-0 right-0 text-center text-white text-sm p-3 translate-y-1 group-hover:translate-y-0 transition duration-300">
-              {item.label}
-            </p>
-          </div>
+      {/* ── Secondary grid — 4 columns, 2 rows, alternating heights ────────── */}
+      <div ref={secondaryRef} className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {secondaryItems.map((item, i) => (
+          <SolutionCard
+            key={i}
+            src={`/home/solution/grid-2/${item.img}`}
+            label={item.label}
+            className={`rounded-sm ${i % 4 < 2 ? "h-90" : "h-90"}`}
+          />
         ))}
       </div>
     </div>

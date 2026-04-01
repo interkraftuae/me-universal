@@ -118,7 +118,7 @@ export default function NewsAndContact() {
   }, [loading]);
 
   return (
-    <section ref={sectionRef} className="mt-24">
+    <section ref={sectionRef} className="mt-14">
       <div className="container">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">

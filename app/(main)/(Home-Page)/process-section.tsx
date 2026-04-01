@@ -28,7 +28,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="mt-24 bg-gray-50 py-20">
+    <section className="mt-5 bg-gray-50 py-20">
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div>
