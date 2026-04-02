@@ -78,7 +78,7 @@ const Header = () => {
       ],
     },
     {
-      label: "Platforms",
+      label: "Ai Platforms",
       link: "",
       children: [
         { label: "Aguardio: Water Conservation", link: "/platforms/aguardio" },
@@ -89,7 +89,7 @@ const Header = () => {
         },
         { label: "Archflow: HVAC Optimisation", link: "/platforms/archflow" },
         { label: "Deepscent: Digital Fragrance", link: "/platforms/deepscent" },
-        { label: "Mylo: Pool Monitoring ", link: "/platforms/mylo" },
+        { label: "Mylo: Pool Safety Monitoring ", link: "/platforms/mylo" },
       ],
     },
   ];

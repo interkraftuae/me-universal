@@ -41,12 +41,12 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="h-[400px] relative">
+      <section className="h-[620px] relative">
         <Image
-          src={"/sqm/hero.png"}
+          src={"/sqm/03.jpg"}
           alt={"per sqm"}
           fill
-          className="object-cover"
+          className="object-cover object-top"
         />
       </section>
 
@@ -74,7 +74,7 @@ const Page = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 container">
           <div className="relative h-[230px] lg:h-[370px]">
             <Image
-              src={"/sqm/about.png"}
+              src={"/sqm/20.jpg"}
               className=""
               fill
               alt={"object-cover"}

@@ -56,8 +56,12 @@ export default function Footer() {
             </div>
 
             <p className="text-sm text-gray-200 leading-relaxed max-w-[220px]">
-              A dynamic trading and solutions company and a proud subsidiary of
-              ME Universal
+              ME Universal is a system aggregator offering a wide range of
+              solutions tailored to the AEC industry. Our core objective is to
+              provide advanced building and home automation systems that
+              integrate seamlessly into both new and retrofit properties. By
+              implementing these solutions, we help our clients achieve their
+              specific energy efficiency goals through intelligent integration.
             </p>
 
             {/* Social Icons */}

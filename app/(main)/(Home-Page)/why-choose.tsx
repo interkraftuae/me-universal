@@ -4,20 +4,28 @@ import { Marquee } from "@/components/ui/marquee";
 
 const images = [
   {
-    img: "tech-team.avif",
-    title: "In-House Design & Development",
+    img: "Inhouse-Manufacturing-Facility.jpeg",
+    title: "Inhouse Manufacturing Facility",
   },
   {
-    img: "in-house-design.jpg",
-    title: "Manufacturing & Assembly Capabilities",
+    img: "Trained-Technicians.jpeg",
+    title: "Trained Technicians",
   },
   {
-    img: "assembly.webp",
-    title: "Energy-Efficient Building Technologies",
+    img: "Certified-Engineers.jpeg",
+    title: "Certified- Engineers",
   },
   {
-    img: "smart-home.jpg",
-    title: "Certified Engineers & Technologists",
+    img: "Inhouse-Design-Engineering.jpeg",
+    title: "Inhouse Design Engineering",
+  },
+  {
+    img: "Integration-and-Testing.jpeg",
+    title: "Integration & Testing",
+  },
+  {
+    img: "Inhouse-Fabrication.jpeg",
+    title: "Inhouse Fabrication",
   },
 ];
 const firstRow = images.slice(0, images.length / 2);

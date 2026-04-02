@@ -29,7 +29,7 @@ const HeroSection = () => {
       tl.fromTo(
         overlayRef.current,
         { opacity: 1 },
-        { opacity: 0.55, duration: 1.6, ease: "power2.inOut" },
+        { opacity: 0.7, duration: 1.6, ease: "power2.inOut" },
       )
 
         // Each word slides up from below its overflow-hidden wrapper
@@ -123,17 +123,20 @@ const HeroSection = () => {
         autoPlay
         playsInline
       >
-        <source src="/home/hero/hero.mp4" type="video/mp4" />
+        <source
+          src="/home/hero/digital-city-buildings-with-data-4k-2026-01-28-02-59-03-utc.mp4"
+          type="video/mp4"
+        />
       </video>
 
-      <div ref={overlayRef} className="absolute inset-0 size-full bg-black" />
+      <div ref={overlayRef} className="absolute inset-0 size-full bg-black " />
 
       <div className="relative grid grid-cols-1 lg:grid-cols-[1.1fr_.9fr] container items-center gap-8">
         {/* Text */}
         <div className="order-2 lg:order-1 text-center lg:text-left space-y-2">
           <h1
             ref={headingRef}
-            className="text-3xl lg:text-5xl lg:leading-13 font-montserrat tracking-tight text-gray-50"
+            className="text-3xl lg:text-5xl font-medium lg:leading-14 font-montserrat tracking-tight text-gray-50"
           >
             <span className="text-primary">Integrated Technologies</span> for{" "}
             <br className="hidden lg:block" />
