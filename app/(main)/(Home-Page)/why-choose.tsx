@@ -29,7 +29,7 @@ const images = [
   },
 ];
 const firstRow = images.slice(0, images.length / 2);
-const secondRow = images.slice(images.length / 2);
+const secondRow = images.slice(images.length );
 const WhyChoose = () => {
   return (
     <div className=" mt-20">
