@@ -81,15 +81,15 @@ const Header = () => {
       label: "Ai Platforms",
       link: "",
       children: [
-        { label: "Aguardio: Water Conservation", link: "/platforms/aguardio" },
-        { label: "Aiello: Voice Assist Concierge", link: "/platforms/aiello" },
+        { label: " Water Conservation", link: "/platforms/aguardio" },
+        { label: " Voice Assist Concierge", link: "/platforms/aiello" },
         {
-          label: "Analytika: Building Diagnostics",
+          label: " Building Diagnostics",
           link: "/platforms/analytika",
         },
-        { label: "Archflow: HVAC Optimisation", link: "/platforms/archflow" },
-        { label: "Deepscent: Digital Fragrance", link: "/platforms/deepscent" },
-        { label: "Mylo: Pool Safety Monitoring ", link: "/platforms/mylo" },
+        { label: " HVAC Optimisation", link: "/platforms/archflow" },
+        { label: " Digital Fragrance", link: "/platforms/deepscent" },
+        { label: " Pool Safety Monitoring ", link: "/platforms/mylo" },
       ],
     },
   ];

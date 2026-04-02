@@ -55,7 +55,7 @@ export default function Footer() {
               <Logo mode="dark" className="w-40" />
             </div>
 
-            <p className="text-sm text-gray-200 leading-relaxed max-w-[220px]">
+            <p className="text-sm text-gray-200 leading-relaxed max-w-xl">
               ME Universal is a system aggregator offering a wide range of
               solutions tailored to the AEC industry. Our core objective is to
               provide advanced building and home automation systems that
