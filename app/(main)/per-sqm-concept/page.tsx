@@ -36,7 +36,9 @@ const Page = () => {
       <section className="bg-[#15141D] pt-44 pb-10">
         <div className="container flex justify-center h-full items-center">
           <div className="text-white text-center">
-            <h1 className="text-5xl mb-8 uppercase font-montserrat">Per Sqm concept</h1>
+            <h1 className="text-5xl mb-8 uppercase font-montserrat">
+              Per Sqm concept
+            </h1>
             <p className="text-2xl">See. Experience. Innovate.</p>
           </div>
         </div>
@@ -73,12 +75,7 @@ const Page = () => {
       <section className="mt-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 container">
           <div className="relative h-[230px] lg:h-[370px]">
-            <Image
-              src={"/sqm/20.jpg"}
-              className=""
-              fill
-              alt={"object-cover"}
-            />
+            <Image src={"/sqm/20.jpg"} className="" fill alt={"object-cover"} />
           </div>
           <div>
             <h2 className="text-4xl font-montserrat mb-7">
@@ -116,19 +113,8 @@ const Page = () => {
 
           {/* Image Collage */}
         </div>
-        <div className=" h-[500px] mt-10 w-full relative">
-          <Image
-            src={"/sqm/collage.png"}
-            alt={""}
-            fill
-            className="object-contain hidden lg:block"
-          />
-          <Image
-            src={"/sqm/collage-mobile.png"}
-            alt={""}
-            fill
-            className="object-cover lg:hidden block"
-          />
+        <div className="">
+          <CollageGrid />
         </div>
       </section>
 
@@ -176,3 +162,167 @@ const Page = () => {
 };
 
 export default Page;
+
+function CollageGrid() {
+  const boxes = [
+    { id: 1, img: "03.jpg", label: "Bathroom" },
+    { id: 2, img: "06.jpg", label: "Architecture" },
+    { id: 3, img: "07.jpg", label: "Appliances" },
+    { id: 4, img: "08.jpg", label: "Laundry" },
+    { id: 5, img: "09.jpg", label: "Lighting" },
+    { id: 6, img: "11.jpg", label: "Smart City" },
+    { id: 7, img: "15.jpg", label: "Security" },
+    { id: 8, img: "17.jpg", label: "Home Cinema" },
+  ];
+
+  return (
+    <section className="w-full py-16 container">
+      <div
+        className="
+          grid gap-2
+          grid-cols-2 grid-rows-[140px_140px_140px]
+          md:grid-cols-3 md:grid-rows-[160px_160px_160px]
+          lg:grid-cols-[0.55fr_1fr_1fr_1fr_0.55fr] lg:grid-rows-[200px_200px]
+        "
+      >
+        {/* B1 — col1, spans 2 rows. Inset on desktop */}
+        <div
+          className="
+            col-start-1 row-start-1 row-span-2
+            lg:mt-6 lg:mb-6
+            rounded-2xl overflow-hidden relative group cursor-pointer
+            transition-transform duration-200 ease-out hover:scale-[1.025]
+          "
+        >
+          <Image
+            src="/sqm/03.jpg"
+            fill
+            alt="Bathroom"
+            className="object-cover"
+          />
+        </div>
+
+        {/* B2 — col2 top */}
+        <div
+          className="
+            col-start-2 row-start-1
+            rounded-2xl overflow-hidden relative group cursor-pointer
+            transition-transform duration-200 ease-out hover:scale-[1.025]
+          "
+        >
+          <Image
+            src="/sqm/06.jpg"
+            fill
+            alt="Architecture"
+            className="object-cover"
+          />
+        </div>
+
+        {/* B3 — col2 bottom */}
+        <div
+          className="
+            col-start-2 row-start-2
+            rounded-2xl overflow-hidden relative group cursor-pointer
+            transition-transform duration-200 ease-out hover:scale-[1.025]
+          "
+        >
+          <Image
+            src="/sqm/07.jpg"
+            fill
+            alt="Appliances"
+            className="object-cover"
+          />
+        </div>
+
+        {/* B4 — center hero. Hidden mobile, col3 spans 2 rows on md+ */}
+        <div
+          className="
+            hidden
+            md:block md:col-start-3 md:row-start-1 md:row-span-2
+            lg:col-start-3 lg:row-start-1 lg:row-span-2
+            rounded-2xl overflow-hidden relative group cursor-pointer
+            transition-transform duration-200 ease-out hover:scale-[1.025]
+          "
+        >
+          <Image
+            src="/sqm/08.jpg"
+            fill
+            alt="Laundry"
+            className="object-cover"
+          />
+        </div>
+
+        {/* B5 — mobile: col1 row3 | md: col1 row3 | lg: col4 row1 */}
+        <div
+          className="
+            col-start-1 row-start-3
+            md:col-start-1 md:row-start-3
+            lg:col-start-4 lg:row-start-1
+            rounded-2xl overflow-hidden relative group cursor-pointer
+            transition-transform duration-200 ease-out hover:scale-[1.025]
+          "
+        >
+          <Image
+            src="/sqm/09.jpg"
+            fill
+            alt="Lighting"
+            className="object-cover"
+          />
+        </div>
+
+        {/* B6 — mobile: col2 row3 | md: col2 row3 | lg: col4 row2 */}
+        <div
+          className="
+            col-start-2 row-start-3
+            md:col-start-2 md:row-start-3
+            lg:col-start-4 lg:row-start-2
+            rounded-2xl overflow-hidden relative group cursor-pointer
+            transition-transform duration-200 ease-out hover:scale-[1.025]
+          "
+        >
+          <Image
+            src="/sqm/11.jpg"
+            fill
+            alt="Smart City"
+            className="object-cover"
+          />
+        </div>
+
+        {/* B7 — hidden mobile | md: col3 row3 | lg: col5 row1 */}
+        <div
+          className="
+            hidden
+            md:block md:col-start-3 md:row-start-3
+            lg:col-start-5 lg:row-start-1
+            rounded-2xl overflow-hidden relative group cursor-pointer
+            transition-transform duration-200 ease-out hover:scale-[1.025]
+          "
+        >
+          <Image
+            src="/sqm/15.jpg"
+            fill
+            alt="Security"
+            className="object-cover"
+          />
+        </div>
+
+        {/* B8 — desktop only | lg: col5 row2 */}
+        <div
+          className="
+            hidden
+            lg:block lg:col-start-5 lg:row-start-2
+            rounded-2xl overflow-hidden relative group cursor-pointer
+            transition-transform duration-200 ease-out hover:scale-[1.025]
+          "
+        >
+          <Image
+            src="/sqm/17.jpg"
+            fill
+            alt="Home Cinema"
+            className="object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
