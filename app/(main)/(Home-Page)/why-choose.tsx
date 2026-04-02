@@ -32,17 +32,7 @@ const images = [
 const WhyChoose = () => {
   return (
     <div className=" mt-20">
-      <div className="">
-        <h1 className="text-4xl max-w-4xl font-semibold font-montserrat tracking-tight mb-3 text-center mx-auto">
-          Why Choose US?
-        </h1>
-        <p className="max-w-4xl text-center mx-auto">
-          ME Universal focuses on delivering integrated IoT and automation
-          solutions for modern buildings, combining technical expertise with
-          practical implementation.
-        </p>
-        <ImageMarquee />
-      </div>
+      <ImageMarquee />
     </div>
   );
 };

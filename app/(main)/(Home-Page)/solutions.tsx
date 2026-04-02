@@ -123,7 +123,10 @@ const secondaryItems = [
   { label: "Wireless Retrofit Automation", img: "wireless-retrofit.jpg" },
   { label: "Bathroom Ventilation System", img: "bathroom-ventilation.jpg" },
   { label: "Odor Control & Air Disinfection", img: "odor-control.png" },
-  { label: "Digital Electric Towel Warmer", img: "electric-warmer.jpg" },
+  {
+    label: "Digital Electric Towel Warmer",
+    img: "Digital-Electric-Towel-Warmer.png",
+  },
   { label: "Home Cinema & Sound Systems", img: "home-cinema.jpg" },
   { label: "Mirror TV Systems", img: "mirror-tv.jpg" },
   { label: "Water Leakage Solution", img: "water-leakage.png" },
@@ -222,7 +225,7 @@ const SolutionGrid = () => {
         {/* Hero — spans 2 rows on lg */}
         <div className="grid-card group relative h-full overflow-hidden opacity-0 rounded-sm sm:row-span-2">
           <Image
-            src="/home/solution/grid-1/dc-lighting.jpg"
+            src="/home/solution/grid-1/DC Lighting.png"
             alt="DC Lighting & Automation"
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
@@ -241,7 +244,7 @@ const SolutionGrid = () => {
           className="rounded-sm"
         />
         <SolutionCard
-          src="/home/solution/grid-1/grabage-line.png"
+          src="/home/solution/grid-1/Garbage-Linen-Chute.jpeg"
           label="Garbage & Line Chutes"
           className="rounded-sm"
         />
@@ -251,7 +254,7 @@ const SolutionGrid = () => {
           className="rounded-sm"
         />
         <SolutionCard
-          src="/solutions/building-and-energy-managememt/hospitality-and-guest-experiencewebp.webp"
+          src="/home/solution/grid-1/Building Automation.jpeg"
           label="Building Automation & Energy Mgmt"
           className="rounded-sm"
         />
