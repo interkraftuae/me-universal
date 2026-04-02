@@ -26,7 +26,7 @@ const protocols = [
   },
   {
     desc: "Advanced digital lighting control protocol enabling precise lighting management.",
-    img: "dali",
+    img: "dalli",
   },
   {
     desc: "Low-power long-range wireless communication technology used for IoT sensor networks.",

@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/ui/marquee";
 const Logos = [
-  { img: "dalli.png", title: "Dalli Group" },
   { img: "amazon.png", title: "Amazon" },
   { img: "honda.png", title: "Honda" },
   { img: "hp.png", title: "Hewlett Packard" },

@@ -28,7 +28,6 @@ const images = [
     title: "Inhouse Fabrication",
   },
 ];
-const firstRow = images.slice(0, images.length / 2);
 const secondRow = images.slice(images.length );
 const WhyChoose = () => {
   return (
