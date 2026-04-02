@@ -10,22 +10,22 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 const cards = [
   {
     title: "Architects & Interior Designers",
-    desc: "We support architects and designers by integrating smart systems early in the design phase...",
+    desc: "We support architects and designers by integrating smart systems early in the design phase. Our team provides CAD-compatible layouts, product specifications, and visualization support, enabling seamless integration of smart technologies into modern architectural concepts.",
     icon: DraftingCompass,
   },
   {
     title: "MEP & Specialist Consultants",
-    desc: "Our technical team works closely with consultants by providing BOQ preparation...",
+    desc: "Our technical team works closely with consultants by providing BOQ preparation, protocol selection, system architecture planning, and detailed coordination drawings to ensure smart building technologies integrate efficiently with core building systems.",
     icon: HardHat,
   },
   {
     title: "Developers & Investors",
-    desc: "ME Universal helps developers evaluate the financial and operational benefits...",
+    desc: "ME Universal helps developers evaluate the financial and operational benefits of smart building technologies, including energy optimization potential, building efficiency improvements, and long-term asset value enhancement.",
     icon: TrendingUp,
   },
   {
-    title: "Engineering Companies",
-    desc: "We provide supply, integration, and technical partnership services...",
+    title: "Contractors",
+    desc: "For complex developments, we assist project teams through technical reviews, value engineering, commissioning support, and system documentation to ensure successful project delivery.",
     icon: Wrench,
   },
 ];

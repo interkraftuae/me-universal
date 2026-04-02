@@ -29,7 +29,7 @@ const ReviewCard = ({ img, title }: { img: string; title: string }) => {
   return (
     <figure
       className={cn(
-        "relative z-10 flex items-center justify-center lg:h-auto w-44 lg:w-40 transition-all duration-300 lg:mr-12 brightness-0 grayscale-100 hover:grayscale-0 hover:brightness-100 cursor-pointer overflow-hidden",
+        "relative z-10 flex items-center justify-center lg:h-auto w-44 lg:w-40 transition-all duration-300 lg:mr-12 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 cursor-pointer overflow-hidden",
       )}
     >
       <img
