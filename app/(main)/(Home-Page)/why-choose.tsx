@@ -28,7 +28,7 @@ const images = [
     title: "Inhouse Fabrication",
   },
 ];
-const secondRow = images.slice(images.length );
+
 const WhyChoose = () => {
   return (
     <div className=" mt-20">
@@ -74,7 +74,7 @@ function ImageMarquee() {
   return (
     <div className="relative mt-10 flex w-full flex-col items-center justify-center overflow-hidden">
       <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
+        {images.map((review) => (
           <ReviewCard key={review.title} {...review} />
         ))}
       </Marquee>
