@@ -122,15 +122,15 @@ export default Solutions;
 const secondaryItems = [
   { label: "Wireless Retrofit Automation", img: "wireless-retrofit.jpg" },
   { label: "Bathroom Ventilation System", img: "bathroom-ventilation.jpg" },
-  { label: "Odor Control & Air Disinfection", img: "odor-control.png" },
+  { label: "Odor Control & Air Disinfection", img: "odor-control.jpeg" },
   {
     label: "Digital Electric Towel Warmer",
     img: "Digital-Electric-Towel-Warmer.png",
   },
-  { label: "Home Cinema & Sound Systems", img: "home-cinema.jpg" },
-  { label: "Mirror TV Systems", img: "mirror-tv.jpg" },
-  { label: "Water Leakage Solution", img: "water-leakage.png" },
-  { label: "Digital Fragrance", img: "digital-fragnance.jpg" },
+  { label: "Home Cinema & Sound Systems", img: "home-cinema.jpeg" },
+  { label: "Mirror TV Systems", img: "Bespoke-Mirror-TV.jpeg" },
+  { label: "Water Leakage Solution", img: "water-leakage.jpeg" },
+  { label: "Digital Fragrance", img: "Digitral-Fragrance.jpeg" },
 ];
 
 // ─── Card ────────────────────────────────────────────────────────────────────
@@ -249,7 +249,7 @@ const SolutionGrid = () => {
           className="rounded-sm"
         />
         <SolutionCard
-          src="/solutions/centralised-vacuum/residential.jpg"
+          src="/home/solution/grid-1/Centralised-Vacuum-Cleaning.png"
           label="Centralised Vacuum Cleaning"
           className="rounded-sm"
         />
