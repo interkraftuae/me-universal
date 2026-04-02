@@ -121,8 +121,8 @@ export default Solutions;
 
 const secondaryItems = [
   { label: "Wireless Retrofit Automation", img: "wireless-retrofit.jpg" },
-  { label: "Bathroom Ventilation System", img: "bathroom-ventilation.jpg" },
-  { label: "Odor Control & Air Disinfection", img: "odor-control.jpeg" },
+  { label: "Bathroom Ventilation System", img: "odor-control.jpeg" },
+  { label: "Odor Control & Air Disinfection", img: "odor.png" },
   {
     label: "Digital Electric Towel Warmer",
     img: "Digital-Electric-Towel-Warmer.png",
