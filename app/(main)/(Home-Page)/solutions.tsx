@@ -128,7 +128,7 @@ const secondaryItems = [
     img: "Digital-Electric-Towel-Warmer.png",
   },
   { label: "Home Cinema & Sound Systems", img: "home-cinema.jpeg" },
-  { label: "Mirror TV Systems", img: "Bespoke-Mirror-TV.jpeg" },
+  { label: "Bespoke Mirror TV Systems", img: "Bespoke-Mirror-TV.jpeg" },
   { label: "Water Leakage Solution", img: "water-leakage.jpeg" },
   { label: "Digital Fragrance", img: "Digitral-Fragrance.jpeg" },
 ];

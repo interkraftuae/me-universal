@@ -14,6 +14,19 @@ const Logos = [
   { img: "adobe.png", title: "Adobe" },
   { img: "uber.png", title: "Uber" },
   { img: "sap.png", title: "SAP" },
+  { img: "amazon.png", title: "Amazon" },
+  { img: "honda.png", title: "Honda" },
+  { img: "hp.png", title: "Hewlett Packard" },
+  { img: "veolia.png", title: "Veolia" },
+  { img: "kotak.png", title: "Kotak" },
+  { img: "damac.png", title: "DAMAC" },
+  { img: "oracle.png", title: "Oracle" },
+  { img: "cipla.png", title: "Cipla" },
+  { img: "microsoft.png", title: "Microsoft" },
+  { img: "bank-of-america.png", title: "Bank of America" },
+  { img: "adobe.png", title: "Adobe" },
+  { img: "uber.png", title: "Uber" },
+  { img: "sap.png", title: "SAP" },
 ];
 const firstRow = Logos.slice(0, Logos.length / 2);
 

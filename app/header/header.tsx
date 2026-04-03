@@ -13,7 +13,7 @@ const Header = () => {
       children: [
         { label: "About us", link: "/about" },
         { label: "Sustainability", link: "/sustainability" },
-        { label: "Per sqm concept", link: "/per-sqm-concept" },
+        { label: "PER SQM - Experience Center", link: "/per-sqm-concept" },
         { label: "Careers", link: "/careers" },
       ],
     },
@@ -58,7 +58,7 @@ const Header = () => {
           label: "Highrise Community Automation",
           link: "/solutions/highrise-community-automation",
         },
-        { label: "Mirror TV", link: "/solutions/mirror-tv" },
+        { label: "Bespoke Mirror TV", link: "/solutions/mirror-tv" },
         {
           label: "Office & AV Automation",
           link: "/solutions/office-and-av-automation",
