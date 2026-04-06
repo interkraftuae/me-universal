@@ -24,7 +24,7 @@ const Page = () => {
         products={[
           {
             label: "Push Pull Interior Door Lock",
-            img: "/products/push-pull-locks/interior-lock.jpg",
+            img: "/products/push-pull-locks/Anylok 2.jpg",
             lists: [
               "One-step push pull door operation mechanism",
               "Designed for easy access for children, elderly, and disabled users",
@@ -42,7 +42,7 @@ const Page = () => {
           },
           {
             label: "Ergonomic Interior Lock Design",
-            img: "/products/push-pull-locks/ergonomic.jpg",
+            img: "/products/push-pull-locks/mum_ari_us.jpg",
             lists: [
               "Modern ergonomic design for comfortable door interaction",
               "Reduces wrist movement and physical strain",
@@ -51,7 +51,7 @@ const Page = () => {
           },
           {
             label: "Mechanical Accessibility Lock System",
-            img: "/products/push-pull-locks/Mechanical-Accessibility-Lock-System.webp",
+            img: "/products/push-pull-locks/3.jpg",
             lists: [
               "Non-digital mechanical lock system for reliable operation",
               "Combines traditional security with modern usability",

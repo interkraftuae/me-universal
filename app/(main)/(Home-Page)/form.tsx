@@ -2,24 +2,16 @@
 import React, { useState } from "react";
 
 const SERVICES = [
-  // Commercial Solutions
-  "Air Powered Laundry Collection",
-  "Building Automation System",
-  "Centralised Vacuum Cleaning",
-  "DC Lighting & Automation",
-  "Highrise Community Automation",
-  "Bespoke Mirror TV",
-  "Office & AV Automation",
-  "Public Address & Evacuation",
-  "Retrofit Wireless Automation",
-  "Garbage & Linen Chute",
-  // AI Platforms
-  "Water Conservation",
-  "Voice Assist Concierge",
-  "Building Diagnostics",
-  "HVAC Optimisation",
-  "Digital Fragrance",
-  "Pool Safety Monitoring",
+  "Select Service",
+  "Project Design",
+  "Smart Consulting",
+  "OEM Inquiry",
+  "Sales",
+  "Partnership",
+  "Warranty",
+  "Installation",
+  "Service",
+  "Complaints",
 ];
 const COUNTRIES = [
   "Afghanistan",
@@ -289,14 +281,22 @@ const Form = () => {
         </p>
         <div className="w-12 h-0.5 bg-primary mb-6" />
         <p className="text-gray-600 text-sm leading-relaxed mb-3">
-          Whether you are planning a residential development, commercial
-          building, hospitality project, or institutional facility, ME Universal
-          offers a wide range of smart building products and integrated
-          technology solutions designed to meet modern infrastructure needs.
+          ME Universal is an established premier provider of project solutions
+          to the commercial real estate and industrial sectors.
         </p>
         <p className="text-gray-600 text-sm leading-relaxed">
-          Connect with our experts to explore how ME Universal can support your
-          building with innovative, reliable, and future-ready solutions.
+          We support a wide range of essential solutions across areas like
+          automation, lighting or waste management. With a deep product
+          portfolio and an extensive network of developers, builders, industry
+          professionals and project partners, ME Universal has developed a
+          reputation for designing and delivering complex customized solutions
+          for both small and large projects.
+        </p>
+        <p className="text-gray-600 text-sm leading-relaxed">
+          We offer a unique extended warranty service Unicare for our
+          installations. Our team of technical experts offer round the clock
+          support online and offline to ensure uninterrupted operations and
+          top-notch after-sales service.
         </p>
       </div>
 

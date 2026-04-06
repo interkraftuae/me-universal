@@ -3,24 +3,16 @@ import React, { useState } from "react";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 const SERVICES = [
-  // Commercial Solutions
-  "Air Powered Laundry Collection",
-  "Building Automation System",
-  "Centralised Vacuum Cleaning",
-  "DC Lighting & Automation",
-  "Highrise Community Automation",
-  "Bespoke Mirror TV",
-  "Office & AV Automation",
-  "Public Address & Evacuation",
-  "Retrofit Wireless Automation",
-  "Garbage & Linen Chute",
-  // AI Platforms
-  "Water Conservation",
-  "Voice Assist Concierge",
-  "Building Diagnostics",
-  "HVAC Optimisation",
-  "Digital Fragrance",
-  "Pool Safety Monitoring",
+  "Select Service",
+  "Project Design",
+  "Smart Consulting",
+  "OEM Inquiry",
+  "Sales",
+  "Partnership",
+  "Warranty",
+  "Installation",
+  "Service",
+  "Complaints",
 ];
 interface FormFields {
   name: string;
@@ -28,10 +20,180 @@ interface FormFields {
   email: string;
   subject: string;
   service: string;
-  enquiry: string;
+  country: string;
   message: string;
 }
-
+const COUNTRIES = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Argentina",
+  "Armenia",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahrain",
+  "Bangladesh",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Comoros",
+  "Congo",
+  "Costa Rica",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominican Republic",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Eswatini",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "North Korea",
+  "North Macedonia",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palestine",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Somalia",
+  "South Africa",
+  "South Korea",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Togo",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States",
+  "Uruguay",
+  "Uzbekistan",
+  "Venezuela",
+  "Vietnam",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
+];
 type FormErrors = Partial<Record<keyof FormFields, string>>;
 type SubmitStatus = "idle" | "loading" | "success" | "error";
 
@@ -69,8 +231,8 @@ function validate(fields: FormFields): FormErrors {
     errors.service = "Please select a service.";
   }
 
-  if (!fields.enquiry || fields.enquiry === "ENQUIRY") {
-    errors.enquiry = "Please select an enquiry type.";
+  if (!fields.country || fields.country === "country") {
+    errors.country = "Please select an country type.";
   }
 
   if (!fields.message.trim()) {
@@ -104,7 +266,7 @@ const INITIAL: FormFields = {
   email: "",
   subject: "",
   service: "SELECT SERVICE",
-  enquiry: "ENQUIRY",
+  country: "country",
   message: "",
 };
 
@@ -241,14 +403,24 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
             <h2 className="text-4xl font-[500] font-rubik text-black mb-4 leading-tight">
               Have Questions? We Have Answers
             </h2>
-            <div className="space-y-3 text-gray-600 text-lg">
+            <div className="space-y-3 text-gray-600 text-sm">
               <p>
-                Whether you are looking for electric mobility, power solutions,
-                industrial products, or home appliances, our team is ready to
-                help.
+                ME Universal is an established premier provider of project
+                solutions to the commercial real estate and industrial sectors.
               </p>
-              <p>
-                Talk to us to find the right product for your business needs.
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We support a wide range of essential solutions across areas like
+                automation, lighting or waste management. With a deep product
+                portfolio and an extensive network of developers, builders,
+                industry professionals and project partners, ME Universal has
+                developed a reputation for designing and delivering complex
+                customized solutions for both small and large projects.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We offer a unique extended warranty service Unicare for our
+                installations. Our team of technical experts offer round the
+                clock support online and offline to ensure uninterrupted
+                operations and top-notch after-sales service.
               </p>
             </div>
           </div>
@@ -312,7 +484,7 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
                 </div>
               </div>
 
-              {/* Row 3: Service + Enquiry */}
+              {/* Row 3: Service + country */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 <div>
                   <select
@@ -335,20 +507,25 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
                 </div>
                 <div>
                   <select
-                    value={fields.enquiry}
-                    onChange={set("enquiry")}
-                    onBlur={blur("enquiry")}
-                    aria-invalid={!!visibleErrors.enquiry}
-                    className={`${inputClass(!!visibleErrors.enquiry)} text-gray-600`}
+                    name="country"
+                    value={fields.country}
+                    onChange={set("country")}
+                    onBlur={blur("country")}
+                    aria-invalid={!!visibleErrors.country}
+                    className={`${inputClass(!!visibleErrors.country)} text-gray-600`}
                   >
-                    <option value="ENQUIRY" disabled>
-                      ENQUIRY
-                    </option>
-                    <option>Product Information</option>
-                    <option>Partnership</option>
-                    <option>Other</option>
+                    <option value="">Your Country *</option>
+                    {COUNTRIES.map((c) => (
+                      <option key={c} value={c}>
+                        {c}
+                      </option>
+                    ))}
                   </select>
-                  <FieldError msg={visibleErrors.enquiry} />
+                  {errors.country && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.country}
+                    </p>
+                  )}
                 </div>
               </div>
 
