@@ -12,7 +12,7 @@ const page = () => {
         img={
           "/solutions/highrise-community-automation/two-families-with-daughters-sitting-on-lawn-2026-03-10-03-21-00-utc.jpg"
         }
-        title={" Highrise & Community Automation"}
+        title={" Highrise Community Automation"}
         desc={"Smarter Living. Seamlessly Connected."}
       />
       <HeadTitle
