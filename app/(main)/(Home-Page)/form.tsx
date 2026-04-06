@@ -1,6 +1,279 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+
+const SERVICES = [
+  // Commercial Solutions
+  "Air Powered Laundry Collection",
+  "Building Automation System",
+  "Centralised Vacuum Cleaning",
+  "DC Lighting & Automation",
+  "Highrise Community Automation",
+  "Bespoke Mirror TV",
+  "Office & AV Automation",
+  "Public Address & Evacuation",
+  "Retrofit Wireless Automation",
+  "Garbage & Linen Chute",
+  // AI Platforms
+  "Water Conservation",
+  "Voice Assist Concierge",
+  "Building Diagnostics",
+  "HVAC Optimisation",
+  "Digital Fragrance",
+  "Pool Safety Monitoring",
+];
+const COUNTRIES = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Argentina",
+  "Armenia",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahrain",
+  "Bangladesh",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Comoros",
+  "Congo",
+  "Costa Rica",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominican Republic",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Eswatini",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "North Korea",
+  "North Macedonia",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palestine",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Somalia",
+  "South Africa",
+  "South Korea",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Togo",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States",
+  "Uruguay",
+  "Uzbekistan",
+  "Venezuela",
+  "Vietnam",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
+];
+
+type FormFields = {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  service: string;
+  country: string;
+  message: string;
+};
+
+type FormErrors = Partial<Record<keyof FormFields, string>>;
+
+const initialForm: FormFields = {
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  service: "",
+  country: "",
+  message: "",
+};
+
+function validate(form: FormFields): FormErrors {
+  const errors: FormErrors = {};
+
+  if (!form.name.trim()) errors.name = "Name is required.";
+  if (!form.email.trim()) {
+    errors.email = "Email is required.";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+    errors.email = "Enter a valid email address.";
+  }
+  if (!form.phone.trim()) {
+    errors.phone = "Phone number is required.";
+  } else if (!/^\+?[\d\s\-()]{7,20}$/.test(form.phone)) {
+    errors.phone = "Enter a valid phone number.";
+  }
+  if (!form.subject.trim()) errors.subject = "Subject is required.";
+  if (!form.service) errors.service = "Please select a service.";
+  if (!form.country) errors.country = "Please select your country.";
+  if (!form.message.trim()) errors.message = "Message is required.";
+
+  return errors;
+}
 
 const Form = () => {
+  const [form, setForm] = useState<FormFields>(initialForm);
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    if (errors[name as keyof FormFields]) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const validationErrors = validate(form);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    console.log("Form submitted:", form);
+    setSubmitted(true);
+    setForm(initialForm);
+    setErrors({});
+  };
+
+  const inputCls = (error?: string) =>
+    `p-3 text-sm rounded border bg-white w-full focus:outline-none transition ${
+      error
+        ? "border-red-400 focus:border-red-500"
+        : "border-gray-300 focus:border-primary"
+    }`;
+
   return (
     <div className="container grid md:grid-cols-2 gap-16 items-start">
       {/* Left */}
@@ -29,40 +302,141 @@ const Form = () => {
 
       {/* Form */}
       <div className="bg-[#cfcde2] p-8 rounded">
-        <form className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <input
-              placeholder="Your Name"
-              className="p-3 text-sm rounded border border-gray-300 bg-white w-full focus:outline-none focus:border-primary"
-            />
-            <input
-              placeholder="Your Email"
-              className="p-3 text-sm rounded border border-gray-300 bg-white w-full focus:outline-none focus:border-primary"
-            />
+        {submitted ? (
+          <div className="flex flex-col items-center justify-center py-12 text-center gap-4">
+            <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-white text-2xl">
+              ✓
+            </div>
+            <h3 className="text-xl font-semibold text-gray-800">
+              Message Sent!
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Thank you for reaching out. Our team will get back to you shortly.
+            </p>
+            <button
+              onClick={() => setSubmitted(false)}
+              className="mt-2 text-primary text-sm underline underline-offset-2"
+            >
+              Send another message
+            </button>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <input
-              placeholder="Phone Number"
-              className="p-3 text-sm rounded border border-gray-300 bg-white w-full focus:outline-none focus:border-primary"
-            />
-            <input
-              placeholder="Subject"
-              className="p-3 text-sm rounded border border-gray-300 bg-white w-full focus:outline-none focus:border-primary"
-            />
-          </div>
-          <select className="w-full p-3 text-sm rounded border border-gray-300 bg-white focus:outline-none focus:border-primary">
-            <option>Select Service</option>
-          </select>
-          <select className="w-full p-3 text-sm rounded border border-gray-300 bg-white focus:outline-none focus:border-primary">
-            <option>Select Country</option>
-          </select>
-          <button
-            type="submit"
-            className="w-full btn py-3! hover:bg-primary/80 transition"
-          >
-            Submit
-          </button>
-        </form>
+        ) : (
+          <form className="space-y-4" onSubmit={handleSubmit} noValidate>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <input
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Your Name *"
+                  className={inputCls(errors.name)}
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  name="email"
+                  type="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Your Email *"
+                  className={inputCls(errors.email)}
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                )}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <input
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="Phone Number *"
+                  className={inputCls(errors.phone)}
+                />
+                {errors.phone && (
+                  <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
+                  placeholder="Subject *"
+                  className={inputCls(errors.subject)}
+                />
+                {errors.subject && (
+                  <p className="text-red-500 text-xs mt-1">{errors.subject}</p>
+                )}
+              </div>
+            </div>
+
+            <div>
+              <select
+                name="service"
+                value={form.service}
+                onChange={handleChange}
+                className={inputCls(errors.service)}
+              >
+                <option value="">Select Service *</option>
+                {SERVICES.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+              {errors.service && (
+                <p className="text-red-500 text-xs mt-1">{errors.service}</p>
+              )}
+            </div>
+
+            <div>
+              <select
+                name="country"
+                value={form.country}
+                onChange={handleChange}
+                className={inputCls(errors.country)}
+              >
+                <option value="">Your Country *</option>
+                {COUNTRIES.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+              {errors.country && (
+                <p className="text-red-500 text-xs mt-1">{errors.country}</p>
+              )}
+            </div>
+
+            <div>
+              <textarea
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="Your Message *"
+                rows={4}
+                className={inputCls(errors.message) + " resize-none"}
+              />
+              {errors.message && (
+                <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full btn py-3! hover:bg-primary/80 transition"
+            >
+              Submit
+            </button>
+          </form>
+        )}
       </div>
     </div>
   );

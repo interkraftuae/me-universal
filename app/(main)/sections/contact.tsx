@@ -2,7 +2,26 @@
 import React, { useState } from "react";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
-
+const SERVICES = [
+  // Commercial Solutions
+  "Air Powered Laundry Collection",
+  "Building Automation System",
+  "Centralised Vacuum Cleaning",
+  "DC Lighting & Automation",
+  "Highrise Community Automation",
+  "Bespoke Mirror TV",
+  "Office & AV Automation",
+  "Public Address & Evacuation",
+  "Retrofit Wireless Automation",
+  "Garbage & Linen Chute",
+  // AI Platforms
+  "Water Conservation",
+  "Voice Assist Concierge",
+  "Building Diagnostics",
+  "HVAC Optimisation",
+  "Digital Fragrance",
+  "Pool Safety Monitoring",
+];
 interface FormFields {
   name: string;
   phone: string;
@@ -306,12 +325,11 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
                     <option value="SELECT SERVICE" disabled>
                       SELECT SERVICE
                     </option>
-                    <option>Apparel &amp; Footwear</option>
-                    <option>EV Vehicles</option>
-                    <option>Batteries</option>
-                    <option>Home Appliances</option>
-                    <option>Sleep &amp; Beddings</option>
-                    <option>Travel Bags &amp; Luggage</option>
+                    {SERVICES.map((service) => (
+                      <option key={service} value={service}>
+                        {service}
+                      </option>
+                    ))}
                   </select>
                   <FieldError msg={visibleErrors.service} />
                 </div>
