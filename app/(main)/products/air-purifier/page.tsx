@@ -74,7 +74,8 @@ const page = () => {
             num: "02",
             title: "Intelligent Active Treatment",
             desc: "Our technology adapts to the real-time needs of the environment rather than operating on a fixed timer. By utilizing Photoplasma™ Active Oxidation and Smart Sensor Integration, our systems proactively seek out and neutralize contaminants at the molecular level the moment they are detected. For architects and MEP consultants, this means a 'self-healing' air environment that can be monitored through centralized BMS and Smart Building Platforms. Whether it is maintaining optimal humidity in a luxury villa or managing heavy odour loads in a commercial facility, our scalable solutions ensure that air quality remains a high-performance asset that enhances both occupant health and brand reputation.",
-            image: "/products/air-purifier/Gemini_Generated_Image_j0avu4j0avu4j0av.png",
+            image:
+              "/products/air-purifier/Gemini_Generated_Image_j0avu4j0avu4j0av.png",
             imageLeft: false,
           },
         ]}

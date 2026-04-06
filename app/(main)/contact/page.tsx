@@ -9,7 +9,7 @@ const page = () => {
           <h2 className="text-4xl font-rubik mb-4 text-gray-50">
             We’d Love to Hear From You
           </h2>
-          <p className="text-lg max-w-2xl text-gray-100">
+          <p className="text-lg max-w-2xl text-gray-100 mx-auto">
             Whether you’re looking for reliable electronics, stylish apparel, or
             durable travel bags, our team is here to answer your questions and
             explore new opportunities with you. Reach out today and let’s build
