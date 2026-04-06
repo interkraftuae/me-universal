@@ -68,16 +68,14 @@ const page = () => {
             num: "01",
             title: "Simplified Low-Voltage Infrastructure",
             desc: "Our DC-powered systems redefine how buildings are wired, replacing heavy AC cabling with streamlined, Plug-and-Play Ethernet Architecture. By delivering power and data through a single cable, we eliminate the need for complex conduits and bulky drivers at every fixture. This modularity allows architects and MEP consultants to design cleaner ceilings and more flexible floor plans. Whether integrating Persqm X-PoE for an office or Moorgen luxury controls for a villa, the hardware integrates discreetly into the interior design, reducing installation complexity while significantly lowering long-term maintenance costs.",
-            image:
-              "/solutions/dc-lighting-and-automation/Image 4.jpeg",
+            image: "/solutions/dc-lighting-and-automation/Image 4.jpeg",
             imageLeft: true,
           },
           {
             num: "02",
             title: "Unified Intelligent Ecosystems",
             desc: "Beyond simple illumination, our solutions serve as the digital backbone of a modern building. Our systems are designed for full interoperability, supporting industry-standard protocols such as KNX, BACnet, and Modbus. This ensures that lighting, climate, and AV systems powered by platforms like RTI work in perfect harmony rather than as isolated silos. This 'future-ready' adaptability means that as technology evolves, your space can be reconfigured or upgraded through software and simple network expansions, ensuring the building remains efficient and intelligent for years to come",
-            image:
-              "/solutions/dc-lighting-and-automation/Image 5.jpg.jpeg",
+            image: "/solutions/dc-lighting-and-automation/Image 5.jpg.jpeg",
             imageLeft: false,
           },
         ]}

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -120,17 +121,46 @@ export default Solutions;
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const secondaryItems = [
-  { label: "Wireless Retrofit Automation", img: "wireless-retrofit.jpg" },
-  { label: "Bathroom Ventilation System", img: "odor-control.jpeg" },
-  { label: "Odor Control & Air Disinfection", img: "odor.png" },
+  {
+    label: "Wireless Retrofit Automation",
+    img: "wireless-retrofit.jpg",
+    href: "/solutions/retrofit-wireless-automation",
+  },
+  {
+    label: "Bathroom Ventilation System",
+    img: "odor-control.jpeg",
+    href: "/products/air-purifier",
+  },
+  {
+    label: "Odor Control & Air Disinfection",
+    img: "odor.png",
+    href: "/products/air-purifier",
+  },
   {
     label: "Electric Towel Warmer",
     img: "Digital-Electric-Towel-Warmer.png",
+    href: "/products/electric-towel-warmer",
   },
-  { label: "Home Cinema & Sound Systems", img: "home-cinema.jpeg" },
-  { label: "Bespoke Mirror TV Systems", img: "Bespoke-Mirror-TV.jpeg" },
-  { label: "Water Leakage Solution", img: "water-leakage.jpeg" },
-  { label: "Digital Fragrance", img: "Digitral-Fragrance.jpeg" },
+  {
+    label: "Home Cinema & Sound Systems",
+    img: "home-cinema.jpeg",
+    href: "/solutions/home-cinema-sound-systems",
+  },
+  {
+    label: "Bespoke Mirror TV Systems",
+    img: "Bespoke-Mirror-TV.jpeg",
+    href: "/solutions/mirror-tv",
+  },
+  {
+    label: "Water Leakage Solution",
+    img: "water-leakage.jpeg",
+    href: "/solutions/aguardio",
+  },
+  {
+    label: "Digital Fragrance",
+    img: "Digitral-Fragrance.jpeg",
+    href: "/solutions/deepscent",
+  },
 ];
 
 // ─── Card ────────────────────────────────────────────────────────────────────
@@ -138,30 +168,41 @@ const secondaryItems = [
 const SolutionCard = ({
   src,
   label,
+  href,
   className = "",
   imgClassName = "",
 }: {
   src: string;
   label: string;
+  href?: string;
   className?: string;
   imgClassName?: string;
-}) => (
-  <div
-    className={`grid-card bg-gray-50 group relative overflow-hidden opacity-0 ${className}`}
-  >
-    <Image
-      src={src}
-      alt={label}
-      fill
-      sizes="(max-width: 768px) 100vw, 50vw"
-      className={`object-cover transition duration-700 group-hover:scale-105 ${imgClassName}`}
-    />
+}) => {
+  const inner = (
+    <div
+      className={`grid-card bg-gray-50 group relative overflow-hidden opacity-0 ${className}`}
+    >
+      <Image
+        src={src}
+        alt={label}
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className={`object-cover transition duration-700 group-hover:scale-105 ${imgClassName}`}
+      />
+      <p className="absolute bottom-0 left-0 right-0 text-white bg-[#100b09b5] text-center text-lg font-medium p-4 leading-snug rounded-b-sm">
+        {label}
+      </p>
+    </div>
+  );
 
-    <p className="absolute bottom-0 left-0 right-0 text-white bg-black/90 text-lg font-medium p-4 leading-snug">
-      {label}
-    </p>
-  </div>
-);
+  return href ? (
+    <Link href={href} className="block">
+      {inner}
+    </Link>
+  ) : (
+    inner
+  );
+};
 
 // ─── Grid ────────────────────────────────────────────────────────────────────
 
@@ -212,62 +253,65 @@ const SolutionGrid = () => {
 
   return (
     <div id="solutions" className="container space-y-4">
-      {/* ── Primary grid ─────────────────────────────────────────────────────
-          Layout (desktop):
-            col 1 (wide): tall hero card spanning 2 rows
-            col 2 & 3:    2 × 2 standard cards
-          All cells use explicit min-h so nothing collapses.
-      ──────────────────────────────────────────────────────────────────────── */}
       <div
         ref={primaryRef}
-        className="grid grid-cols-1 sm:grid-cols-2 h-[550px] lg:grid-cols-3 gap-4"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
       >
-        {/* Hero — spans 2 rows on lg */}
-        <div className="grid-card group relative h-full overflow-hidden opacity-0 rounded-sm sm:row-span-2">
-          <Image
-            src="/home/solution/grid-1/DC Lighting.png"
-            alt="DC Lighting & Automation"
-            fill
-            sizes="(max-width: 768px) 100vw, 33vw"
-            className="parallax-img object-cover h-full transition duration-700 group-hover:scale-105"
-          />
-
-          <p className="absolute bottom-0 left-0 right-0 text-white bg-black/90 text-lg font-medium p-4 leading-snug">
-            POE DC Lighting & Automation
-          </p>
-        </div>
+        {/* Hero — spans 2 rows on sm+ */}
+        <Link
+          href="/solutions/dc-lighting"
+          className="block rounded-sm sm:row-span-2"
+        >
+          <div className="grid-card group relative h-[260px] lg:h-[550px] sm:h-full overflow-hidden opacity-0 rounded-sm">
+            <Image
+              src="/home/solution/grid-1/DC Lighting.png"
+              alt="DC Lighting & Automation"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="parallax-img object-cover h-full transition duration-700 group-hover:scale-105"
+            />
+            <p className="absolute bottom-0 left-0 right-0 text-white bg-[#100b09b5] text-center text-lg font-medium p-4 leading-snug rounded-b-sm">
+              POE DC Lighting & Automation
+            </p>
+          </div>
+        </Link>
 
         {/* 4 standard cards fill the remaining 2 × 2 area */}
         <SolutionCard
           src="/home/solution/grid-1/ai-powered.jpg"
           label="Air Powered Laundry Collection"
-          className="rounded-sm"
+          className="rounded-sm h-[260px]"
+          href="/solutions/ai-powered-laundry"
         />
         <SolutionCard
           src="/home/solution/grid-1/Garbage-Linen-Chute.jpeg"
           label="Garbage & Linen Chutes"
-          className="rounded-sm"
+          className="rounded-sm h-[260px]"
+          href="/solutions/garbage-and-linen-chutes"
         />
         <SolutionCard
           src="/home/solution/grid-1/Centralised-Vacuum-Cleaning.png"
           label="Centralised Vacuum Cleaning"
-          className="rounded-sm"
+          className="rounded-sm h-[260px]"
+          href="/solutions/centralised-vacuum"
         />
         <SolutionCard
           src="/home/solution/grid-1/Building Automation.jpeg"
           label="Building Automation & Energy Management"
-          className="rounded-sm"
+          className="rounded-sm h-[260px]"
+          href="/solutions/building-and-energy-management"
         />
       </div>
 
-      {/* ── Secondary grid — 4 columns, 2 rows, alternating heights ────────── */}
-      <div ref={secondaryRef} className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* ── Secondary grid — 4 columns, 2 rows ──────────────────────────────── */}
+      <div ref={secondaryRef} className="grid grid-cols-1 lg:grid-cols-4 gap-4">
         {secondaryItems.map((item, i) => (
           <SolutionCard
             key={i}
+            href={item.href}
             src={`/home/solution/grid-2/${item.img}`}
             label={item.label}
-            className={`rounded-sm ${i % 4 < 2 ? "h-90" : "h-90"}`}
+            className="rounded-sm h-[360px]"
           />
         ))}
       </div>
