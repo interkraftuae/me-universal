@@ -124,7 +124,7 @@ const secondaryItems = [
   { label: "Bathroom Ventilation System", img: "odor-control.jpeg" },
   { label: "Odor Control & Air Disinfection", img: "odor.png" },
   {
-    label: "Digital Electric Towel Warmer",
+    label: "Electric Towel Warmer",
     img: "Digital-Electric-Towel-Warmer.png",
   },
   { label: "Home Cinema & Sound Systems", img: "home-cinema.jpeg" },
