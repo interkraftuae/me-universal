@@ -86,36 +86,36 @@ const Page = () => {
         heading="Proven Across Modern Architectural Workflows"
         topRow={[
           {
-            src: "/platforms/archflow/architecture-design.jpg",
-            alt: "Corporate office",
-            label: "Architecture & Design Studios",
+            src: "/platforms/archflow/shopping-mall.jpg",
+            alt: "Shopping mall",
+            label: "Shopping Malls",
           },
           {
-            src: "/platforms/archflow/real-estate-development.jpg",
-            alt: "Healthcare",
-            label: "Real Estate Development Projects",
+            src: "/platforms/archflow/school.jpeg",
+            alt: "Schools and colleges",
+            label: "Schools & College Buildings",
           },
           {
-            src: "/platforms/archflow/urban-planning-and-master-planning.jpg",
-            alt: "High performance",
-            label: "Urban Planning & Master Planning",
+            src: "/platforms/archflow/residential-tower.jpg",
+            alt: "Residential towers",
+            label: "Residential Towers",
           },
         ]}
         bottomRow={[
           {
-            src: "/platforms/archflow/commercial-mix-use.jpeg",
-            alt: "Laboratory",
-            label: "Commercial & Mixed-Use Developments",
+            src: "/platforms/archflow/hotels.webp",
+            alt: "Hotels",
+            label: "Hotel Properties",
           },
           {
-            src: "/platforms/archflow/residential-planning-projects.jpg",
-            alt: "Institutional",
-            label: "Residential Planning Projects",
+            src: "/platforms/archflow/office-building.jpg",
+            alt: "Office buildings",
+            label: "Commercial Office Buildings",
           },
           {
-            src: "/platforms/archflow/Large-Scale-Infrastructure-Developments.jpg",
-            alt: "Mixed use",
-            label: "Large-Scale Infrastructure Developments",
+            src: "/platforms/archflow/airports.jpg",
+            alt: "Airports",
+            label: "Airports & Metro Buildings",
           },
         ]}
       />
