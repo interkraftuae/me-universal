@@ -1,7 +1,6 @@
 import HeroSection from "../../solutions/sections/hero-section";
 import Info from "../sections/info";
 import TimelineFeatureSection from "../sections/timeline-feature";
-import { Link2, Workflow, Smartphone, BellRing } from "lucide-react";
 import ProvenGridSection from "../sections/provengrid";
 import PlatformSolutionsSection from "../sections/platform-solution";
 import DarkFeatureSection from "../sections/dark-feature-section";
@@ -11,7 +10,7 @@ const Page = () => {
   return (
     <div>
       <HeroSection
-        img={"/platforms/aguardio/banner.jpg"}
+        img={"/platforms/aguardio/Gemini_Generated_Image_1nwc8d1nwc8d1nwc.png"}
         title={"Aguardio"}
         desc={"Intelligent Water Conservation Platform"}
       />

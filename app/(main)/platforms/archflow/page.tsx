@@ -122,7 +122,7 @@ const Page = () => {
       <PlatformSolutionsSection
         heading="Platform Solutions"
         subheading="ArchFlow is structured to support multiple stages of architectural design and planning:"
-        image="/platforms/archflow/platform-solutions.webp"
+        image="/platforms/archflow/Gemini_Generated_Image_avwkzwavwkzwavwk.png"
         imageAlt="Modern building architecture"
         solutions={[
           {

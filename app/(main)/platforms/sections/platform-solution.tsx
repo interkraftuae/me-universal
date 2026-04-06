@@ -38,7 +38,7 @@ const PlatformSolutionsSection = ({
         </div>
 
         {/* Full-width image */}
-        <div className="relative w-full bg-gray-300 h-[220px] md:h-[360px] overflow-hidden mb-12">
+        <div className="relative w-full bg-gray-300 h-[220px] md:h-[420px] overflow-hidden mb-12">
           <Image src={image} alt={imageAlt} fill className="object-cover" />
         </div>
 

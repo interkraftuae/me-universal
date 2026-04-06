@@ -16,9 +16,10 @@ const Page = () => {
   return (
     <div>
       <HeroSection
-        img={"/platforms/aiello/banner-2.png"}
+        img={"/platforms/aiello/banner.jpg"}
         title={"Aiello"}
         desc={"AI Voice Concierge Platform"}
+        object="object-bottom object-cover"
       />
       <Info
         tagline="Intelligent Guest Interaction for Modern Hospitality"
@@ -95,7 +96,7 @@ const Page = () => {
         heading=" Proven Across Premium Commercial Environments"
         topRow={[
           {
-            src: "/platforms/aiello/hotels.jpg",
+            src: "/platforms/aiello/A4.jpg",
             alt: "Corporate office",
             label: "Luxury Hotels & Resorts",
           },
@@ -112,7 +113,7 @@ const Page = () => {
         ]}
         bottomRow={[
           {
-            src: "/platforms/aiello/residential.jpg",
+            src: "/platforms/aiello/A3.jpg",
             alt: "Laboratory",
             label: "High-End Residential Serviced Residences",
           },
@@ -122,7 +123,7 @@ const Page = () => {
             label: "Hospitality Suites & Smart Guest Rooms",
           },
           {
-            src: "/platforms/aiello/smart-hotels.jpg",
+            src: "/platforms/aiello/A5.jpg",
             alt: "Mixed use",
             label: "Integrated Smart Hotel Developments",
           },
@@ -131,7 +132,7 @@ const Page = () => {
       <PlatformSolutionsSection
         heading="Platform Solutions"
         subheading="Aiello is structured into specialized hospitality voice service modules:"
-        image="/platforms/aiello/voice-changer.jpg"
+        image="/platforms/aiello/A2.jpg"
         imageAlt="Modern building architecture"
         solutions={[
           {

@@ -11,9 +11,10 @@ const Page = () => {
   return (
     <div>
       <HeroSection
-        img={"/platforms/deepscent/banner.webp"}
+        img={"/platforms/deepscent/banner.jpg"}
         title={"Deepscent"}
         desc={"AI Fragrance Intelligence Platform"}
+        object="object-cover object-top"
       />
       <Info
         tagline="Transform Spaces Through Intelligent Scent"
@@ -126,7 +127,7 @@ const Page = () => {
       <PlatformSolutionsSection
         heading="Platform Solutions"
         subheading="Deepscent is structured into specialized fragrance delivery solutions:"
-        image="/platforms/deepscent/platforms-solutions.png"
+        image="/platforms/deepscent/Gemini_Generated_Image_i270t8i270t8i270.png"
         imageAlt="Modern building architecture"
         solutions={[
           {
