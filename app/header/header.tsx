@@ -98,15 +98,13 @@ const Header = () => {
   const pathName = usePathname();
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Check immediately on mount
+    handleScroll();
 
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
