@@ -34,7 +34,7 @@ const page = () => {
             Visit Our Location
           </h2>
           <p className="text-sm text-gray-500 mt-2 max-w-xl">
-            We are proudly based in Singapore, serving clients with cutting-edge
+            We are proudly based in United Arab Emirates, serving clients with cutting-edge
             automation and technology solutions. Feel free to explore our
             location or visit us for a consultation.
           </p>
