@@ -9,7 +9,9 @@ const page = () => {
   return (
     <div>
       <HeroSection
-        img={"/solutions/highrise-community-automation/banner.jpg"}
+        img={
+          "/solutions/highrise-community-automation/two-families-with-daughters-sitting-on-lawn-2026-03-10-03-21-00-utc.jpg"
+        }
         title={" Highrise & Community Automation"}
         desc={"Smarter Living. Seamlessly Connected."}
       />
@@ -35,7 +37,7 @@ const page = () => {
               "Home appliance integration and automation",
               "Unified access and security control interface",
             ],
-            img: "/solutions/highrise-community-automation/smart-home-automation-blog.webp",
+            img: "/solutions/highrise-community-automation/woman-controlling-security-from-a-mobile-device-2026-01-09-06-37-37-utc.jpg",
           },
           {
             title: "Community Management",
@@ -60,7 +62,7 @@ const page = () => {
               "Real-time alerts for security and community services",
               "Integrated communication for residents and administrators",
             ],
-            img: "/solutions/highrise-community-automation/building-management-hub.webp",
+            img: "/solutions/highrise-community-automation/Gemini_Generated_Image_mxucgqmxucgqmxuc.png",
           },
         ]}
       />
@@ -79,7 +81,7 @@ const page = () => {
             title: "Scalable Management for Modern Developments",
             desc: "Whether you are developing a boutique residential tower or a sprawling gated community, our platform adapts to the specific operational density of the project. The Building Management Hub provides facility teams with a centralized dashboard to oversee security, parking, and parcel deliveries without intruding on resident privacy. For developers, this modularity means the system can be deployed in phases, growing as the community expands. This approach not only enhances the day-to-day resident experience but also significantly boosts the long-term asset value.",
             image:
-              "/solutions/highrise-community-automation/scalable-management-for-modern-developments.jpg",
+              "/solutions/highrise-community-automation/H1.jpeg",
             imageLeft: false,
           },
         ]}
@@ -128,7 +130,7 @@ const page = () => {
         eyebrow="Architect & Developer Corner"
         subtitle="Supporting Smarter, More Liveable Residential Development"
         description="Integrated automation is becoming a defining feature of premium residential projects."
-        image="/solutions/highrise-community-automation/platform-solutions.jpg"
+        image="/solutions/highrise-community-automation/entrance-doorbell-in-a-multi-apartment-building-w-2026-01-09-07-26-10-utc.jpg"
         imageAlt="Laundry inlet installation"
         intro="Our solutions support architects, interior consultants, and property developers in creating communities that:"
         bullets={[
