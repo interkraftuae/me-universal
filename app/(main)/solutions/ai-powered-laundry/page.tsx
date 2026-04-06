@@ -33,7 +33,7 @@ const page = () => {
               "Safe, quiet, and family-friendly operation",
               "Adds premium automation value to modern homes",
             ],
-            img: "/solutions/ai-powered-laundry/residential-laundry.png",
+            img: "/solutions/ai-powered-laundry/LJ_5 (2).jpg",
           },
           {
             title: "Hospitality Laundry Collection System",
@@ -117,7 +117,7 @@ const page = () => {
         eyebrow="Architect & Developer Corner"
         subtitle="Supporting Smarter, More Efficient Building Design"
         description="Efficient internal logistics is becoming a key part of modern building planning."
-        image="/solutions/ai-powered-laundry/paltoform-solutions.jpg"
+        image="/solutions/ai-powered-laundry/LJ_55 (2).jpg"
         imageAlt="Laundry inlet installation"
         intro="Our systems support architects, MEP consultants, and developers in creating buildings that:"
         bullets={[

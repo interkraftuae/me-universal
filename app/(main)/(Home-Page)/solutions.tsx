@@ -156,8 +156,8 @@ const SolutionCard = ({
       sizes="(max-width: 768px) 100vw, 50vw"
       className={`object-cover transition duration-700 group-hover:scale-105 ${imgClassName}`}
     />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-    <p className="absolute bottom-0 left-0 right-0 text-white text-sm font-medium px-4 py-3 leading-snug">
+
+    <p className="absolute bottom-0 left-0 right-0 text-white bg-black/90 text-lg font-medium p-4 leading-snug">
       {label}
     </p>
   </div>
@@ -231,9 +231,9 @@ const SolutionGrid = () => {
             sizes="(max-width: 768px) 100vw, 33vw"
             className="parallax-img object-cover h-full transition duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-          <p className="absolute bottom-8 left-0 right-0 text-white text-sm font-medium px-4 py-3 leading-snug">
-            DC Lighting &amp; Automation
+
+          <p className="absolute bottom-0 left-0 right-0 text-white bg-black/90 text-lg font-medium p-4 leading-snug">
+            POE DC Lighting & Automation
           </p>
         </div>
 
@@ -245,7 +245,7 @@ const SolutionGrid = () => {
         />
         <SolutionCard
           src="/home/solution/grid-1/Garbage-Linen-Chute.jpeg"
-          label="Garbage & Line Chutes"
+          label="Garbage & Linen Chutes"
           className="rounded-sm"
         />
         <SolutionCard
@@ -255,7 +255,7 @@ const SolutionGrid = () => {
         />
         <SolutionCard
           src="/home/solution/grid-1/Building Automation.jpeg"
-          label="Building Automation & Energy Mgmt"
+          label="Building Automation & Energy Management"
           className="rounded-sm"
         />
       </div>

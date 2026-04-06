@@ -7,7 +7,7 @@ const Page = () => {
   return (
     <div>
       <HeroSection
-        img={"/products/towel-warmer/banner.png"}
+        img={"/products/towel-warmer/banner.jpg"}
         title={" Electric Towel Warmers"}
         desc={"Bathroom Comfort & Hygiene Solutions"}
       />
@@ -24,7 +24,7 @@ const Page = () => {
         products={[
           {
             label: "Wall Mounted Electric Towel Warmer",
-            img: "/products/towel-warmer/wall-mounted-electric-towel-warmer.avif",
+            img: "/products/towel-warmer/A5.jpg",
             lists: [
               "Elegant wall-mounted towel warmer designed for modern bathroom interiors",
               "Provides consistent heating for improved towel comfort",
@@ -33,7 +33,7 @@ const Page = () => {
           },
           {
             label: "Digital Temperature Controlled Towel Warmer",
-            img: "/products/towel-warmer/temp-control.png",
+            img: "/products/towel-warmer/A10.jpg",
             lists: [
               "Integrated digital control for adjustable heating settings",
               "Maintains consistent temperature for reliable towel warming",

@@ -101,7 +101,27 @@ const AccordionItem = ({
     </div>
   );
 };
-
+const SimpleNavItem = ({
+  label,
+  href,
+  onClose,
+  itemRef,
+}: {
+  label: string;
+  href?: string;
+  onClose: () => void;
+  itemRef?: (el: HTMLLIElement | null) => void;
+}) => (
+  <li ref={itemRef} className="border-b border-gray-100">
+    <a
+      href={href ?? "#"}
+      onClick={onClose}
+      className="block py-4 text-2xl font-medium text-gray-800 hover:text-gray-500 transition-colors"
+    >
+      {label}
+    </a>
+  </li>
+);
 const MobileNav = ({ data }: { data: NavItem[] }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -223,6 +243,25 @@ const MobileNav = ({ data }: { data: NavItem[] }) => {
               <AccordionItem item={item} onClose={closeMenu} />
             </li>
           ))}
+
+          <SimpleNavItem
+            label="Careers"
+            href="/careers"
+            onClose={closeMenu}
+            itemRef={(el) => {
+              if (el) itemsRef.current[data.length] = el;
+            }}
+          />
+
+          {/* Contact us */}
+          <SimpleNavItem
+            label="Contact us"
+            href="/contact"
+            onClose={closeMenu}
+            itemRef={(el) => {
+              if (el) itemsRef.current[data.length + 1] = el;
+            }}
+          />
         </ul>
       </nav>
     </div>

@@ -57,7 +57,7 @@ const page = () => {
               "Smart sensors for real-time adjustment",
               "Ideal for offices, boardrooms, and premium interiors",
             ],
-            img: "/products/air-purifier/Humidification.png",
+            img: "/products/air-purifier/Air Purifier 3.jpg",
           },
         ]}
       />
@@ -67,7 +67,7 @@ const page = () => {
             num: "01",
             title: "Integrated Wellness Infrastructure",
             desc: "Modern healthy building standards require air quality solutions that do more than just sit in a corner. Our systems are designed to integrate directly into the building's operational flow, whether as standalone designer units for premium boardrooms or concealed industrial-grade systems for high-traffic corridors and waste rooms. By utilizing Filter-Free Continuous Purification, we eliminate the need for bulky, high-maintenance mechanical filters, allowing for a more compact and discreet architectural footprint. This modularity ensures that developers can maintain the aesthetic integrity of a space while providing medical-grade air and surface disinfection that functions silently 24/7.",
-            image: "/products/air-purifier/integrated-wellnesss.jpg",
+            image: "/products/air-purifier/wellness.jpg",
             imageLeft: true,
           },
           {

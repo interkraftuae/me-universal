@@ -5,7 +5,7 @@ const page = () => {
   return (
     <>
       <section className="relative pt-20 flex flex-col items-center justify-center min-h-[400px] w-full h-full">
-        <div className="relative z-10 text-center ">
+        <div className="relative z-10 text-center container ">
           <h2 className="text-4xl font-rubik mb-4 text-gray-50">
             We’d Love to Hear From You
           </h2>

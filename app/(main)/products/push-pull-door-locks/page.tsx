@@ -33,7 +33,7 @@ const Page = () => {
           },
           {
             label: "Push Pull Door Lock Mechanism",
-            img: "/products/push-pull-locks/door.jpg",
+            img: "/products/push-pull-locks/3.png",
             lists: [
               "Push or pull motion activates a 90-degree rotating latch bolt",
               "Eliminates the need for twisting or gripping traditional handles",

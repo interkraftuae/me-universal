@@ -114,7 +114,7 @@ const HeroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-[80dvh] lg:min-h-[95dvh] relative flex py-26 lg:py-0 justify-center items-center overflow-hidden"
+      className="min-h-[70dvh] lg:min-h-[95dvh] relative flex py-26 lg:py-0 justify-center items-center overflow-hidden"
     >
       <video
         className="absolute w-full h-full object-cover inset-0"

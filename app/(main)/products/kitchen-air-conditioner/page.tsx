@@ -9,7 +9,8 @@ const page = () => {
   return (
     <div>
       <HeroSection
-        img={"/products/kitchen-ac/banner.webp"}
+        object="object-cover "
+        img={"/products/kitchen-ac/Gemini_Generated_Image_x0tcxmx0tcxmx0tc.png"}
         title={"Kitchen Air Conditioning System"}
         desc={"Clean Air. Balanced Temperature. Safer Kitchens."}
       />
