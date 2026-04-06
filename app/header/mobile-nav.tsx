@@ -244,14 +244,7 @@ const MobileNav = ({ data }: { data: NavItem[] }) => {
             </li>
           ))}
 
-          <SimpleNavItem
-            label="Careers"
-            href="/careers"
-            onClose={closeMenu}
-            itemRef={(el) => {
-              if (el) itemsRef.current[data.length] = el;
-            }}
-          />
+        
 
           {/* Contact us */}
           <SimpleNavItem
