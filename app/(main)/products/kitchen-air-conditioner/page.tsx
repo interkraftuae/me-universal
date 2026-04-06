@@ -34,7 +34,7 @@ const page = () => {
               "Helps manage humidity, oil smoke, and hot air accumulation",
               "Suitable for residential kitchens and professional cooking spaces",
             ],
-            img: "/products/kitchen-ac/four-season.png",
+            img: "/products/kitchen-ac/k3.jpg",
           },
           {
             title: "H₂O₂ Sterilization Kitchen AC System",
@@ -45,7 +45,7 @@ const page = () => {
               "Safe reaction process with harmless by-products",
               "Ideal for kitchens where sanitation and air purity are critical",
             ],
-            img: "/products/kitchen-ac/uv-kitchen-exhaust-hood.jpg",
+            img: "/products/kitchen-ac/k5.jpeg",
           },
           {
             title: "HC Separation Air Circulation System",
@@ -56,7 +56,7 @@ const page = () => {
               "Improves comfort and airflow stability in enclosed kitchens",
               "Designed for efficient air exchange in compact environments",
             ],
-            img: "/products/kitchen-ac/industrial-kitchen-ventilation-system.png",
+            img: "/products/kitchen-ac/k1.jpg",
           },
           {
             title: "Integrated Kitchen Climate Control System",
@@ -67,7 +67,7 @@ const page = () => {
               "Adjustable temperature range from 16°C to 30°C",
               "Built for continuous operation in demanding kitchen conditions",
             ],
-            img: "/products/kitchen-ac/climate-control.png",
+            img: "/products/kitchen-ac/k4.jpg",
           },
         ]}
       />
@@ -119,7 +119,7 @@ const page = () => {
         eyebrow="Architect & Developer Corner"
         subtitle="Supporting Smarter Kitchen Infrastructure"
         description="Kitchen environments present unique design challenges due to heat generation, moisture, smoke, and hygiene requirements."
-        image="/products/kitchen-ac/kitchen-env.png"
+        image="/products/kitchen-ac/young-girl-in-love-in-a-green-dress-in-the-kitchen-2026-03-16-00-22-44-utc.jpg"
         imageAlt="Laundry inlet installation"
         intro="Our solutions support architects, MEP consultants, and developers in designing kitchen spaces that:"
         bullets={[

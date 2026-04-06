@@ -34,7 +34,7 @@ const page = () => {
               "Ideal for washrooms, corridors, waste rooms, and high-traffic zones",
               "Enhances hygiene standards in commercial spaces",
             ],
-            img: "/products/air-purifier/odour-control.png",
+            img: "/products/air-purifier/Gemini_Generated_Image_2osh5i2osh5i2osh.png",
           },
           {
             title: "High-Efficiency Air Purifier (Industrial Grade)",
@@ -46,7 +46,7 @@ const page = () => {
               "Low power consumption",
               "Suitable for high-footfall environments",
             ],
-            img: "/products/air-purifier/air-purifier.avif",
+            img: "/products/air-purifier/Air Purifier 3.jpg",
           },
           {
             title: "Premium Air Purifier + Humidification System",
@@ -57,7 +57,7 @@ const page = () => {
               "Smart sensors for real-time adjustment",
               "Ideal for offices, boardrooms, and premium interiors",
             ],
-            img: "/products/air-purifier/Air Purifier 3.jpg",
+            img: "/products/air-purifier/Gemini_Generated_Image_nt63lnnt63lnnt63.png",
           },
         ]}
       />
@@ -74,7 +74,7 @@ const page = () => {
             num: "02",
             title: "Intelligent Active Treatment",
             desc: "Our technology adapts to the real-time needs of the environment rather than operating on a fixed timer. By utilizing Photoplasma™ Active Oxidation and Smart Sensor Integration, our systems proactively seek out and neutralize contaminants at the molecular level the moment they are detected. For architects and MEP consultants, this means a 'self-healing' air environment that can be monitored through centralized BMS and Smart Building Platforms. Whether it is maintaining optimal humidity in a luxury villa or managing heavy odour loads in a commercial facility, our scalable solutions ensure that air quality remains a high-performance asset that enhances both occupant health and brand reputation.",
-            image: "/products/air-purifier/air-treatment.jpg",
+            image: "/products/air-purifier/Gemini_Generated_Image_j0avu4j0avu4j0av.png",
             imageLeft: false,
           },
         ]}
