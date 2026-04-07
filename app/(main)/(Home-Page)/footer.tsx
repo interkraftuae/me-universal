@@ -1,36 +1,60 @@
-import React from "react";
-import { Facebook, Linkedin, Instagram } from "lucide-react";
 import Logo from "@/app/header/Logo";
 import Image from "next/image";
+
 const quickLinks = [
-  "Home",
-  "About Us",
-  "Platforms",
-  "Careers",
-  "Contact Us",
-  "Commercial Solutions",
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact Us", href: "/contact" },
 ];
-const legalLinks = ["Privacy Policy", "Terms & Conditions"];
-const supportLinks = [
-  "Vendor Registration",
-  "Submit Plans",
-  "Service Request",
-  "Installation & Extended Warranty",
+const platforms = [
+  { label: "Water Conservation", href: "/platforms/aguardio" },
+  { label: "Voice Assist Concierge", href: "/platforms/aiello" },
+  { label: " Building Diagnostics  ", href: "/platforms/analytika" },
+  { label: "HVAC Optimisation", href: "/platforms/archflow" },
+];
+const solutions = [
+  {
+    label: "Centralised Vacuum Cleaning",
+    href: "/solutions/centralised-vacuum",
+  },
+  {
+    label: "DC Lighting & Automation",
+    href: "/solutions/dc-lighting-and-automation",
+  },
+  {
+    label: "Garbage & Linen Chute",
+    href: "/solutions/garbage-and-linen-chutes",
+  },
+  {
+    label: "Bespoke Mirror TV",
+    href: "/solutions/mirror-tv",
+  },
+  {
+    label: "Retrofit Wireless Automation",
+    href: "/solutions/retrofit-wireless-automation",
+  },
 ];
 
-const FooterColumn = ({ title, links }: { title: string; links: string[] }) => (
+const FooterColumn = ({
+  title,
+  links,
+}: {
+  title: string;
+  links: { label: string; href: string }[];
+}) => (
   <div>
     <h4 className="text-md font-montserrat tracking-tight font-bold text-gray-100 uppercase mb-2">
       {title}
     </h4>
     <ul className="space-y-3 font-roboto">
       {links.map((link) => (
-        <li key={link}>
+        <li key={link.href}>
           <a
-            href="#"
+            href={link.href}
             className="text-xs text-gray-300 uppercase tracking-wide transition-colors hover:text-primary"
           >
-            {link}
+            {link.label}
           </a>
         </li>
       ))}
@@ -48,12 +72,10 @@ export default function Footer() {
         className="object-cover"
       />
       <div className="container relative">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-10">
           {/* Brand Column */}
-          <div className="flex flex-col gap-4 col-span-2">
-            <div>
-              <Logo mode="dark" className="w-40" />
-            </div>
+          <div className="lg:col-span-4 flex flex-col gap-5">
+            <Logo mode="dark" className="w-40" />
 
             <p className="text-sm text-gray-200 leading-relaxed max-w-xl">
               ME Universal is a system aggregator offering a wide range of
@@ -122,9 +144,12 @@ export default function Footer() {
           </div>
 
           {/* Link Columns */}
-          <FooterColumn title="Quick Links" links={quickLinks} />
-          <FooterColumn title="Legal Links" links={legalLinks} />
-          <FooterColumn title="Support" links={supportLinks} />
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-10 lg:pl-10">
+            {" "}
+            <FooterColumn title="Quick Links" links={quickLinks} />
+            <FooterColumn title="Platforms" links={platforms} />
+            <FooterColumn title="Solutions" links={solutions} />
+          </div>
         </div>
 
         {/* Bottom Bar */}

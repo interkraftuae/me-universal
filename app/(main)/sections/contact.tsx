@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-
+import { Phone, Mail } from "lucide-react";
 // ─── Types ────────────────────────────────────────────────────────────────────
 const SERVICES = [
   "Select Service",
@@ -289,7 +289,13 @@ function inputClass(hasError: boolean) {
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
+const Contact = ({
+  color = "bg-[#FFEDEE]",
+  card,
+}: {
+  color?: string;
+  card?: boolean;
+}) => {
   const [fields, setFields] = useState<FormFields>(INITIAL);
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<
@@ -359,7 +365,7 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
   if (status === "success") {
     return (
       <section className={`py-12 ${color} mb-14`} id="contact">
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className=" ">
           <div className="bg-white rounded-lg shadow-lg p-10 text-center max-w-md mx-auto">
             <div className="size-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg
@@ -396,7 +402,7 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
 
   return (
     <section className={`py-12 ${color} mb-14`} id="contact">
-      <div className="container mx-auto px-6 max-w-6xl">
+      <div className=" container">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* ================= LEFT ================= */}
           <div>
@@ -423,6 +429,33 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
                 operations and top-notch after-sales service.
               </p>
             </div>
+            {card && (
+              <div className="mt-6 z-10 space-y-3">
+                <a
+                  href="tel:+971501483346"
+                  className="group flex items-center gap-3 text-sm text-gray-600 transition-colors hover:text-black"
+                >
+                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-gray-200">
+                    <Phone size={14} strokeWidth={2.5} />
+                  </div>
+                  <span className="font-medium tracking-wide">
+                    +971 50 1483346
+                  </span>
+                </a>
+
+                <a
+                  href="mailto:info@meuniversal.com"
+                  className="group flex items-center gap-3 text-sm text-gray-600 transition-colors hover:text-black"
+                >
+                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-gray-200">
+                    <Mail size={14} strokeWidth={2.5} />
+                  </div>
+                  <span className="font-medium tracking-wide">
+                    info@meuniversal.com
+                  </span>
+                </a>
+              </div>
+            )}
           </div>
 
           {/* ================= RIGHT: FORM ================= */}
