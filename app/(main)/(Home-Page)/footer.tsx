@@ -159,12 +159,9 @@ export default function Footer() {
           </p>
           <p className="text-xs text-gray-200 font-[500] tracking-widest uppercase">
             Created by{" "}
-            <a
-              href={"https://spok.digital"}
-              className="text-red-500 underline underline-offset-2"
-            >
+            <span className="text-red-500 underline underline-offset-2">
               Spok Digital
-            </a>
+            </span>
           </p>
         </div>
       </div>
