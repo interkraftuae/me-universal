@@ -232,8 +232,11 @@ function validate(form: FormFields): FormErrors {
 const Form = () => {
   const [form, setForm] = useState<FormFields>(initialForm);
   const [errors, setErrors] = useState<FormErrors>({});
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [serverError, setServerError] = useState("");
   const [submitted, setSubmitted] = useState(false);
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
@@ -246,19 +249,45 @@ const Form = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const validationErrors = validate(form);
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-    console.log("Form submitted:", form);
-    setSubmitted(true);
-    setForm(initialForm);
-    setErrors({});
-  };
 
+    const validationErrors = validate(form);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) return;
+
+    setStatus("loading");
+    setServerError("");
+
+    try {
+      const res = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...form,
+          enquiry: form.country, // ⚠️ map if backend expects enquiry
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data?.message || "Failed to send message");
+      }
+
+      // ✅ success
+      setStatus("success");
+      setSubmitted(true);
+      setForm(initialForm);
+      setErrors({});
+    } catch (err: any) {
+      setStatus("error");
+      setServerError(err?.message || "Something went wrong");
+    }
+  };
   const inputCls = (error?: string) =>
     `p-3 text-sm rounded border bg-white w-full focus:outline-none transition ${
       error

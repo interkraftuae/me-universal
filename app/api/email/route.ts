@@ -9,7 +9,7 @@ const REQUIRED_FIELDS = [
   "email",
   "subject",
   "service",
-  "enquiry",
+  "country",
   "message",
 ] as const;
 
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const { name, phone, email, subject, service, enquiry, message } = body;
+    const { name, phone, email, subject, service, country, message } = body;
 
     const { error } = await resend.emails.send({
       from: "Contact Form <no-reply@tradingmeet.com>", // ← replace with your verified Resend domain
@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
               ["Phone", phone],
               ["Subject", subject],
               ["Service", service],
-              ["Enquiry", enquiry],
+              ["Country", country],
             ]
               .map(
                 ([label, value]) => `

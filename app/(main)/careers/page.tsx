@@ -83,34 +83,56 @@ const CareersPage = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    setLoading(true);
     e.preventDefault();
+
     const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
+    setErrors(validationErrors);
 
-    const data = new FormData();
-    data.append("name", form.name);
-    data.append("contact", form.contact);
-    data.append("email", form.email);
-    data.append("country", form.country);
-    data.append("message", form.message);
-    if (form.file) data.append("file", form.file);
+    if (Object.keys(validationErrors).length > 0) return;
 
-    const res = await fetch("/api/careers", { method: "POST", body: data });
+    setLoading(true);
 
-    if (res.ok) {
-      setErrors({});
+    try {
+      const data = new FormData();
+      data.append("name", form.name);
+      data.append("contact", form.contact);
+      data.append("email", form.email);
+      data.append("country", form.country);
+      data.append("message", form.message);
+      if (form.file) data.append("file", form.file);
+
+      const res = await fetch("/api/careers", {
+        method: "POST",
+        body: data,
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        throw new Error(result?.error || "Submission failed");
+      }
+
+      // ✅ success
       setSubmitted(true);
-    } else {
-      const { error } = await res.json();
-      setErrors({ message: error ?? "Submission failed. Please try again." });
-    }
-    setLoading(false);
-  };
+      setForm({
+        name: "",
+        contact: "",
+        email: "",
+        file: null,
+        country: "",
+        message: "",
+      });
+      setErrors({});
+    } catch (err: any) {
+      console.error("Submit error:", err);
 
+      setErrors({
+        message: err.message || "Something went wrong",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
   const inputCls = (err?: string) =>
     `w-full border rounded-lg px-3.5 py-2.5 text-sm outline-none transition bg-white text-gray-800 placeholder:text-gray-400 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 ${
       err ? "border-red-400 bg-red-50" : "border-gray-300"

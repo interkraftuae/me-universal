@@ -364,9 +364,9 @@ const Contact = ({
   // ── Success state ──
   if (status === "success") {
     return (
-      <section className={`py-12 ${color} mb-14`} id="contact">
+      <section className={`py-12 mt-10 ${color} mb-14`} id="contact">
         <div className=" ">
-          <div className="bg-white rounded-lg shadow-lg p-10 text-center max-w-md mx-auto">
+          <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-10 text-center max-w-md mx-auto">
             <div className="size-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg
                 className="size-8 text-green-600"
@@ -390,7 +390,7 @@ const Contact = ({
             </p>
             <button
               onClick={() => setStatus("idle")}
-              className="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-yellow-500 transition font-semibold"
+              className="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary/90 transition font-semibold"
             >
               Send Another
             </button>
