@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     const { name, phone, email, subject, service, country, message } = body;
 
     const { error } = await resend.emails.send({
-      from: "Contact Form <no-reply@tradingmeet.com>", // ← replace with your verified Resend domain
+      from: "Contact Form <no-reply@meuniversal.com>", // ← replace with your verified Resend domain
       to: [`${process.env.SEND_EMAIL_TO}`], // ← replace with your recipient
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
