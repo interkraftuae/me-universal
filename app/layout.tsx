@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Rubik, Montserrat, Roboto } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -71,6 +72,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  verification: {
+    google: "-gx1uvI6y2p_pQOnNLYSiqEmH8HvdhurOpGyEvQHJeA",
+  },
 };
 
 export default function RootLayout({
@@ -80,6 +84,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Y34BPTP5BC"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Y34BPTP5BC');
+          `}
+        </Script>
+      </head>
       <body
         className={` ${roboto.variable} ${rubik.variable} ${montserrat.variable} antialiased`}
       >

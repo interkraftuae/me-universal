@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 // ─── Types ────────────────────────────────────────────────────────────────────
 const SERVICES = [
   "Select Service",
@@ -454,6 +454,13 @@ const Contact = ({
                     info@meuniversal.com
                   </span>
                 </a>
+
+                <p   className="group flex items-center gap-3 text-sm text-gray-600">
+                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 transition-colors group-hover:bg-gray-200">
+                    <MapPin size={14} strokeWidth={2.5} />
+                  </div>
+                  Bel Resheed, Building # 2 - 59MJ+R7V - Nadd Al Hamar - Dubai Office No: 7 - Dubai - United Arab Emirates
+                </p>
               </div>
             )}
           </div>
