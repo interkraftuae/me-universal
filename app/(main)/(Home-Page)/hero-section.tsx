@@ -138,9 +138,11 @@ const HeroSection = () => {
             ref={headingRef}
             className="text-3xl lg:text-5xl font-medium lg:leading-14 font-montserrat tracking-tight text-gray-50"
           >
-            <span className="text-primary">Integrated Technologies</span> for{" "}
+            <span className="text-primary">
+              Smart Building & <br /> Home Technology
+            </span>{" "}
             <br className="hidden lg:block" />
-            Smarter, Sustainable Buildings
+            Solutions for Smarter, Sustainable Living
           </h1>
 
           <p ref={paraRef} className="text-gray-200 mb-4 mt-3 opacity-0">

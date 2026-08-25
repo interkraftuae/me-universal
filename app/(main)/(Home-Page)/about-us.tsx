@@ -223,7 +223,7 @@ export default function AboutSection() {
             ref={headingRef}
             className="text-4xl font-semibold font-montserrat tracking-tight mb-6"
           >
-            ABOUT ME UNIVERSAL
+            About ME Universal – Your Smart Building Technology Partner
           </h2>
 
           <div ref={parasRef} className="mb-5 space-y-3">

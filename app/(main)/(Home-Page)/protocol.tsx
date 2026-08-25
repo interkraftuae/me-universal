@@ -199,7 +199,7 @@ export default function ProtocolSection() {
             ref={headingRef}
             className="text-4xl font-semibold font-montserrat max-w-xl leading-tight"
           >
-            WORKS WITH EVERY STANDARD YOU SPECIFY
+            Compatible With Every Building Automation Standard You Specify
           </h2>
         </div>
 

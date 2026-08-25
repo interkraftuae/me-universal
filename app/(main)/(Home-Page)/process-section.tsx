@@ -36,8 +36,7 @@ export default function ProcessSection() {
               // HOW WE WORK
             </p>
             <h2 className="text-4xl uppercase font-semibold font-montserrat leading-tight">
-              From Brief to Building
-              <br />A Structured Process
+              From Brief to Building: Our Structured Delivery Process
             </h2>
           </div>
         </div>

@@ -181,9 +181,9 @@ const FeaturedProduct = () => {
 
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="card-accent-line w-8 h-0.5 bg-primary mb-3 origin-left scale-x-0 group-hover:w-14 transition-[width] duration-300" />
-                <h2 className="card-label text-white font-semibold text-lg opacity-0">
+                <h3 className="card-label text-white font-semibold text-lg opacity-0">
                   {item.label}
-                </h2>
+                </h3>
               </div>
             </Link>
           ))}

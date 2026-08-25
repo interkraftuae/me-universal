@@ -72,12 +72,12 @@ const Solutions = () => {
           // WHAT WE OFFER
         </p>
         <div className="flex flex-col lg:flex-row gap-10 items-start">
-          <h1
+          <h2
             ref={headingRef}
             className="uppercase tracking-tight font-semibold font-montserrat text-4xl lg:w-1/3 leading-tight shrink-0"
           >
             ADVANCED Solutions
-          </h1>
+          </h2>
           <div
             ref={bodyRef}
             className="space-y-3 text-gray-600 text-sm leading-relaxed lg:w-2/3"
@@ -189,9 +189,9 @@ const SolutionCard = ({
         sizes="(max-width: 768px) 100vw, 50vw"
         className={`object-cover transition duration-700 group-hover:scale-105 ${imgClassName}`}
       />
-      <p className="absolute bottom-0 left-0 right-0 text-white bg-[#100b09b5] text-center text-lg font-medium p-4 leading-snug rounded-b-sm">
+      <h3 className="absolute bottom-0 left-0 right-0 text-white bg-[#100b09b5] text-center text-lg font-medium p-4 leading-snug rounded-b-sm">
         {label}
-      </p>
+      </h3>
     </div>
   );
 
@@ -270,9 +270,9 @@ const SolutionGrid = () => {
               sizes="(max-width: 768px) 100vw, 33vw"
               className="parallax-img object-cover h-full transition duration-700 group-hover:scale-105"
             />
-            <p className="absolute bottom-0 left-0 right-0 text-white bg-[#100b09b5] text-center text-lg font-medium p-4 leading-snug rounded-b-sm">
+            <h3 className="absolute bottom-0 left-0 right-0 text-white bg-[#100b09b5] text-center text-lg font-medium p-4 leading-snug rounded-b-sm">
               POE DC Lighting & Automation
-            </p>
+            </h3>
           </div>
         </Link>
 
